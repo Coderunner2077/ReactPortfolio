@@ -504,11 +504,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-5 {
   margin-top: 1.25rem;
 }
-.mb-8 {
-  margin-bottom: 2rem;
-}
 .mt-10 {
   margin-top: 2.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
 }
 .mb-20 {
   margin-bottom: 5rem;
