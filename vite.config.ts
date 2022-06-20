@@ -11,11 +11,6 @@ export default defineConfig({
     },
     plugins: [
         reactRefresh(),
-        svgrPlugin({
-            svgrOptions: {
-                icon: true,
-                // ...svgr options (https://react-svgr.com/docs/options/)
-            },
-        }),
+        svgrPlugin(),
     ],
 })

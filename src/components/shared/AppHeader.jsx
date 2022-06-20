@@ -5,6 +5,7 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import HireMeModal from '../HireMeModal';
 import logoLight from '../../images/logo-light.svg';
 import logoDark from '../../images/logo-dark.svg';
+import logoG from "../../images/logo-g.png";
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 
@@ -45,20 +46,24 @@ const AppHeader = () => {
 			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
-					<div>
+					<div className="">
 						<Link to="/">
 							{activeTheme === 'dark' ? (
-								<img
-									src={logoDark}
-									className="w-36"
-									alt="Dark Logo"
-								/>
+								<div className="flex gap-2 items-center">
+									<img
+										src={logoG}
+										alt="Dark Logo G"
+									/>
+									<h3 className="text-sky-800 text-xl sm:text-3xl font-black">Coderunner</h3>
+								</div>
 							) : (
-								<img
-									src={logoLight}
-									className="w-36"
-									alt="Dark Logo"
-								/>
+								<div className="flex gap-2 items-center">
+									<img
+										src={logoG}
+										alt="Dark Logo G"
+									/>
+									<h3 className="text-white text-xl sm:text-3xl font-black">Coderunner</h3>
+								</div>
 							)}
 						</Link>
 					</div>

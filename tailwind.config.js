@@ -23,6 +23,9 @@ module.exports = {
 					'2xl': '8rem',
 				},
 			},
+			font: {
+				"arial": "Arial Bold, Arial"
+			}
 		},
 	},
 	variants: {

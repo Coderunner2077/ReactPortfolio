@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from '../../images/profile.jpeg';
+import profileImage from '../../images/profile.jpg';
 import { useContext } from 'react';
 import AboutMeContext from '../../context/AboutMeContext';
 

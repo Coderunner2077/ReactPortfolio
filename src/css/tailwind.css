@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    img.header-logo {
+        @apply w-20 sm:w-36;
+    }
+}
+
+img.header-logo {
+    @apply w-20 sm:w-36 hidden;
+}
