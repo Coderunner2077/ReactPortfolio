@@ -13,4 +13,7 @@ export default defineConfig({
         reactRefresh(),
         svgrPlugin(),
     ],
+    preview: {
+        port: 8081
+    }
 })
