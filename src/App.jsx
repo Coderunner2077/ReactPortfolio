@@ -6,6 +6,7 @@ import AppHeader from './components/shared/AppHeader';
 import './css/App.css';
 import About from './pages/AboutMe';
 import Contact from './pages/Contact';
+import HireMe from "./pages/HireMe";
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectSingle from './pages/ProjectSingle';
@@ -29,6 +30,7 @@ function App() {
 
 						<Route path="about" element={<About />} />
 						<Route path="contact" element={<Contact />} />
+						<Route path="hire" element={<HireMe />} />
 					</Routes>
 					<AppFooter />
 				</Router>

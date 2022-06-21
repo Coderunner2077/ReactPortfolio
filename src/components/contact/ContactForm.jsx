@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from '../reusable/Button';
+import http from "../../utils/http";
+import { AiOutlineLoading } from "react-icons/ai";
 
 const ContactForm = () => {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [subject, setSubject] = useState("");
+	const [message, setMessage] = useState("");
+	const [loading, setLoading] = useState(false);
+
+	const handleReset = () => {
+		setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
+	}
+
+	const handleSubmit = e => {
+		setLoading(true);
+		e.preventDefault();
+		http.post("/contact", { name, email, subject, message })
+			.then(() => handleReset())
+			.catch(err => console.log("Error", err));
+	}
+
 	return (
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+					onSubmit={handleSubmit}
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
@@ -29,6 +47,8 @@ const ContactForm = () => {
 							required
 							placeholder="Your Name"
 							aria-label="Name"
+							value={name}
+							onChange={e => setName(e.target.value)}
 						/>
 					</div>
 					<div className="mt-6">
@@ -46,6 +66,8 @@ const ContactForm = () => {
 							required
 							placeholder="Your Email"
 							aria-label="Email"
+							value={email}
+							onChange={e => setEmail(e.target.value)}
 						/>
 					</div>
 					<div className="mt-6">
@@ -63,6 +85,8 @@ const ContactForm = () => {
 							required
 							placeholder="Subject"
 							aria-label="Subject"
+							value={subject}
+							onChange={e => setSubject(e.target.value)}
 						/>
 					</div>
 
@@ -80,15 +104,18 @@ const ContactForm = () => {
 							cols="14"
 							rows="6"
 							aria-label="Message"
+							value={message}
+							onChange={e => setMessage(e.target.value)}
 						></textarea>
 					</div>
 
 					<div className="font-general-medium w-40 px-4 py-2.5 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
-						<Button
-							title="Send Message"
-							type="submit"
+						<button
+							type="submit relative"
 							aria-label="Send Message"
-						/>
+							className="disabled:opacity-40"
+							disabled={loading}
+						>Send Message</button>
 					</div>
 				</form>
 			</div>

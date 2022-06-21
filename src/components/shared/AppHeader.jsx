@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
-import HireMeModal from '../HireMeModal';
-import logoLight from '../../images/logo-light.svg';
-import logoDark from '../../images/logo-dark.svg';
 import logoG from "../../images/logo-g.png";
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
@@ -54,7 +51,7 @@ const AppHeader = () => {
 										src={logoG}
 										alt="Dark Logo G"
 									/>
-									<h3 className="text-sky-800 text-xl sm:text-3xl font-black">Coderunner</h3>
+									<h3 className="text-sky-800 text-xl sm:text-2xl md:text-3xl font-black">Coderunner</h3>
 								</div>
 							) : (
 								<div className="flex gap-2 items-center">
@@ -62,7 +59,7 @@ const AppHeader = () => {
 										src={logoG}
 										alt="Dark Logo G"
 									/>
-									<h3 className="text-white text-xl sm:text-3xl font-black">Coderunner</h3>
+									<h3 className="text-white text-xl sm:text-2xl md:text-3xl font-black">Coderunner</h3>
 								</div>
 							)}
 						</Link>
@@ -172,13 +169,13 @@ const AppHeader = () => {
 				{/* Header right section buttons */}
 				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
 					<div className="hidden md:flex">
-						<span
-							onClick={showHireMeModal}
+						<Link
+							to="/hire"
 							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-							aria-label="Hire Me Button"
+							aria-label="Hire Me"
 						>
 							<Button title="Hire Me" />
-						</span>
+						</Link>
 					</div>
 
 					{/* Theme switcher large screen */}
@@ -194,16 +191,6 @@ const AppHeader = () => {
 						)}
 					</div>
 				</div>
-			</div>
-			{/* Hire me modal */}
-			<div>
-				{showModal ? (
-					<HireMeModal
-						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
-					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
 			</div>
 		</motion.nav>
 	);

@@ -1,27 +1,22 @@
 import React from "react";
-import { FiGithub, FiTwitter, FiInstagram, FiBook } from 'react-icons/fi';
+import { FiGithub, FiTwitter, FiFacebook } from 'react-icons/fi';
 import AppFooterCopyright from './AppFooterCopyright';
 
 const socialLinks = [
 	{
 		id: 1,
 		icon: <FiGithub />,
-		url: 'https://github.com/realstoman',
+		url: 'https://github.com/Coderunner2077',
 	},
 	{
 		id: 2,
 		icon: <FiTwitter />,
-		url: 'https://twitter.com/realstoman',
+		url: 'https://twitter.com/coderunner2077',
 	},
 	{
 		id: 3,
-		icon: <FiBook />,
-		url: 'https://stoman.medium.com',
-	},
-	{
-		id: 4,
-		icon: <FiInstagram />,
-		url: 'https://instagram.com/realstoman',
+		icon: <FiFacebook />,
+		url: 'https://www.facebook.com/coderunner2077',
 	},
 ];
 

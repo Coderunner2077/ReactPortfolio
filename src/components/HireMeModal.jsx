@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
+import http from "../utils/http";
 
 const selectOptions = [
 	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'React Project',
+	'Node.js Project',
+	'UI/UX Design'
 ];
 
 const HireMeModal = ({ onClose, onRequest }) => {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [subject, setSubject] = useState("");
+	const [message, setMessage] = useState("");
+	const [loading, setLoading] = useState(false);
+
+	const handleReset = () => {
+		setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
+	}
+
+	const handleSubmit = e => {
+		setLoading(true);
+		e.preventDefault();
+		http.post("/hire", { name, email, subject, message })
+			.then(() => handleReset())
+			.catch(err => { console.log("Error", err); handleReset(); });
+	}
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -26,9 +45,6 @@ const HireMeModal = ({ onClose, onRequest }) => {
 				<div className="modal-wrapper flex items-center z-30">
 					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
 						<div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
-							<h5 className=" text-primary-dark dark:text-primary-light text-xl">
-								What project are you looking for?
-							</h5>
 							<button
 								onClick={onClose}
 								className="px-4 font-bold text-primary-dark dark:text-primary-light"
@@ -38,9 +54,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 						</div>
 						<div className="modal-body p-5 w-full h-full">
 							<form
-								onSubmit={(e) => {
-									e.preventDefault();
-								}}
+								onSubmit={handleSubmit}
 								className="max-w-xl m-4 text-left"
 							>
 								<div className="">
@@ -52,6 +66,8 @@ const HireMeModal = ({ onClose, onRequest }) => {
 										required=""
 										placeholder="Name"
 										aria-label="Name"
+										value={name}
+										onChange={e => setName(e.target.value)}
 									/>
 								</div>
 								<div className="mt-6">
@@ -63,6 +79,8 @@ const HireMeModal = ({ onClose, onRequest }) => {
 										required=""
 										placeholder="Email"
 										aria-label="Email"
+										value={email}
+										onChange={e => setEmail(e.target.value)}
 									/>
 								</div>
 								<div className="mt-6">
@@ -73,11 +91,13 @@ const HireMeModal = ({ onClose, onRequest }) => {
 										type="text"
 										required=""
 										aria-label="Project Category"
+										onChange={e => setSubject(e.target.value)}
 									>
 										{selectOptions.map((option) => (
 											<option
 												className="text-normal sm:text-md"
 												key={option}
+												value={option}
 											>
 												{option}
 											</option>
@@ -94,6 +114,8 @@ const HireMeModal = ({ onClose, onRequest }) => {
 										rows="6"
 										aria-label="Details"
 										placeholder="Project description"
+										value={message}
+										onChange={e => setMessage(e.target.value)}
 									></textarea>
 								</div>
 
@@ -112,7 +134,12 @@ const HireMeModal = ({ onClose, onRequest }) => {
 											focus:ring-1 focus:ring-indigo-900 duration-500"
 										aria-label="Submit Request"
 									>
-										<Button title="Send Request" />
+										<button
+											type="submit"
+											aria-label="Send Request"
+											className="disabled:opacity-40 relative"
+											disabled={loading}
+										>Send Request</button>
 									</span>
 								</div>
 							</form>
