@@ -3,14 +3,20 @@ import { singleProjectData as singleProjectDataJson } from '../data/singleProjec
 
 const SingleProjectContext = createContext();
 
-export const SingleProjectProvider = ({ children }) => {
+export const SingleProjectProvider = ({ id, children }) => {
 	const [singleProjectData, setSingleProjectData] = useState(
-		singleProjectDataJson
+		isNaN(id) || id < 1 || id > 11 ? undefined : singleProjectDataJson[id - 1]
 	);
+
+	const selectProjectData = (id) => {
+		setSingleProjectData(
+			isNaN(id) || id < 1 || id > 11 ? undefined : singleProjectDataJson[id - 1]
+		);
+	}
 
 	return (
 		<SingleProjectContext.Provider
-			value={{ singleProjectData, setSingleProjectData }}
+			value={{ singleProjectData, selectProjectData }}
 		>
 			{children}
 		</SingleProjectContext.Provider>

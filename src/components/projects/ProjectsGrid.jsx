@@ -4,7 +4,7 @@ import ProjectSingle from './ProjectSingle';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
 
-const ProjectsGrid = () => {
+const ProjectsGrid = ({ count = 6 }) => {
 	const {
 		projects,
 		searchProject,
@@ -97,29 +97,35 @@ const ProjectsGrid = () => {
 				{selectProject
 					? selectProjectsByCategory.map((project) => (
 						<ProjectSingle
+							id={project.id}
 							title={project.title}
 							category={project.category}
 							image={project.img}
-							key={project.id}
+							key={`project-${project.id}`}
 						/>
 					))
 					: searchProject
 						? searchProjectsByTitle.map((project) => (
 							<ProjectSingle
+								id={project.id}
 								title={project.title}
 								category={project.category}
 								image={project.img}
-								key={project.id}
+								key={`project-${project.id}`}
 							/>
 						))
-						: projects.map((project) => (
-							<ProjectSingle
-								title={project.title}
-								category={project.category}
-								image={project.img}
-								key={project.id}
-							/>
-						))}
+						: projects.map((project, index) => {
+							if (index < count) return (
+								<ProjectSingle
+									id={project.id}
+									title={project.title}
+									category={project.category}
+									image={project.img}
+									key={`project-${project.id}`}
+								/>
+							)
+						})
+				}
 			</div>
 		</section>
 	);

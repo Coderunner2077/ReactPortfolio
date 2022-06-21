@@ -11,7 +11,7 @@ const Home = () => {
 			<AppBanner></AppBanner>
 
 			<ProjectsProvider>
-				<ProjectsGrid></ProjectsGrid>
+				<ProjectsGrid count={6}></ProjectsGrid>
 			</ProjectsProvider>
 
 			<div className="mt-8 sm:mt-10 flex justify-center">

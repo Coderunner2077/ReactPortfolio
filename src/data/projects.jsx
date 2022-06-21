@@ -1,51 +1,80 @@
 // Import images
-import WebImage1 from '../images/web-project-1.jpg';
-import WebImage2 from '../images/web-project-2.jpg';
-import MobileImage1 from '../images/mobile-project-1.jpg';
-import MobileImage2 from '../images/mobile-project-2.jpg';
-import UIImage1 from '../images/ui-project-1.jpg';
-import UIImage2 from '../images/ui-project-2.jpg';
+import Corunner1 from "../images/corunner-project-1.jpg";
+import Corunner2 from "../images/corunner-project-2.jpg";
+import ReactNodePassport from "../images/react-node-oauth.jpg";
+import MemoryGame from "../images/memory-game.jpg";
+import ReactMemory from "../images/react-memory.png";
+import NodeSocketIO from "../images/node-socket.io.png";
+import SymfonyPHP from "../images/symfony-php.png";
+import PhpProject from "../images/php-project.png";
+import JavaProject from "../images/java-project.jpg";
+import CProject from "../images/c-project.jpg";
+
 
 export const projectsData = [
 	{
 		id: 1,
-		title: 'Google Health Platform',
+		title: 'Corunner Training Platform',
 		category: 'Web Application',
-		img: WebImage2,
+		img: Corunner2,
 		ProjectHeader: {
 			title: 'Project Management UI - From Context',
 			publishDate: 'Jul 26, 2021',
-			tags: 'UI / Frontend',
+			tags: 'Fullstack / React / NodeJS',
 		},
 	},
 	{
 		id: 2,
-		title: 'Phoenix Digital Agency',
-		category: 'Mobile Application',
-		img: MobileImage2,
+		title: 'React Authentication Frontend',
+		category: 'MERN Project',
+		img: ReactNodePassport,
 	},
 	{
 		id: 3,
-		title: 'Project Management UI',
-		category: 'UI/UX Design',
-		img: UIImage1,
+		title: 'Node Authentication Backend',
+		category: 'MERN Project',
+		img: ReactNodePassport,
 	},
 	{
 		id: 4,
-		title: 'Cloud Storage Platform',
-		category: 'UI/UX Design',
-		img: UIImage2,
+		title: 'React Memory Game',
+		category: 'React Project',
+		img: ReactMemory,
 	},
 	{
 		id: 5,
-		title: 'React Social App',
-		category: 'Mobile Application',
-		img: MobileImage1,
+		title: 'Node Minichat',
+		category: 'Express Project',
+		img: NodeSocketIO,
 	},
 	{
 		id: 6,
-		title: 'Apple Design System',
-		category: 'Web Application',
-		img: WebImage1,
+		title: 'Symfony Social Network',
+		category: 'Symfony PHP Project',
+		img: SymfonyPHP,
+	},
+	{
+		id: 7,
+		title: 'PHP Member Space',
+		category: 'PHP Project',
+		img: PhpProject,
+	},
+	{
+		id: 8,
+		title: 'Java Pendu Game',
+		category: 'Java Project',
+		img: JavaProject,
+	},
+	{
+		id: 9,
+		title: 'Java Garage',
+		category: 'Java Project',
+		img: JavaProject,
+	},
+	{
+		id: 10,
+		title: 'Audio Player',
+		category: 'C Project',
+		img: CProject,
 	},
 ];

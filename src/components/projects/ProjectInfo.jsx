@@ -4,6 +4,12 @@ import SingleProjectContext from '../../context/SingleProjectContext';
 const ProjectInfo = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
 
+	if (!singleProjectData) return (
+		<div className="block sm:flex gap-0 sm:gap-10 mt-14 text-xl text-white">
+			Project with this id does not exist
+		</div>
+	)
+
 	return (
 		<div className="block sm:flex gap-0 sm:gap-10 mt-14">
 			<div className="w-full sm:w-1/3 text-left">
@@ -14,25 +20,27 @@ const ProjectInfo = () => {
 					</p>
 					<ul className="leading-loose">
 						{singleProjectData.ProjectInfo.CompanyInfo.map(
-							(info) => {
+							(info, index) => {
 								return (
 									<li
 										className="font-general-regular text-ternary-dark dark:text-ternary-light"
-										key={info.id}
+										key={`aboutt-${info.id}-${index}`}
 									>
 										<span>{info.title}: </span>
-										<a
-											href="https://stoman.me"
-											className={
-												info.title === 'Website' ||
-													info.title === 'Phone'
-													? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-													: ''
-											}
-											aria-label="Project Website and Phone"
-										>
-											{info.details}
-										</a>
+										{info.title === "Website" || info.title === "Source Code" ? (
+											<a
+												href={info.details}
+												className={
+													info.title === 'Website' ||
+														info.title === 'Source Code'
+														? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
+														: ''
+												}
+												aria-label="Project Website and Phone"
+											>
+												{info.title === "Website" ? info.details : "Github Repository"}
+											</a>
+										) : <span>{info.details}</span>}
 									</li>
 								);
 							}
@@ -51,42 +59,18 @@ const ProjectInfo = () => {
 				</div>
 
 				{/* Single project technologies */}
-				<div className="mb-7">
-					<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-						{singleProjectData.ProjectInfo.Technologies[0].title}
-					</p>
-					<p className="font-general-regular text-primary-dark dark:text-ternary-light">
-						{singleProjectData.ProjectInfo.Technologies[0].techs.join(
-							', '
-						)}
-					</p>
-				</div>
-
-				{/* Single project social sharing */}
-				<div>
-					<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-						{singleProjectData.ProjectInfo.SocialSharingHeading}
-					</p>
-					<div className="flex items-center gap-3 mt-5">
-						{singleProjectData.ProjectInfo.SocialSharing.map(
-							(social) => {
-								return (
-									<a
-										key={social.id}
-										href={social.url}
-										target="__blank"
-										aria-label="Share Project"
-										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-									>
-										<span className="text-lg lg:text-2xl">
-											{social.icon}
-										</span>
-									</a>
-								);
-							}
-						)}
+				{singleProjectData.ProjectInfo.Technologies.map((tech, index) => (
+					<div className="mb-7" key={`tech-${index}`}>
+						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+							{tech.title}
+						</p>
+						<p className="font-general-regular text-primary-dark dark:text-ternary-light">
+							{tech.techs.join(
+								', '
+							)}
+						</p>
 					</div>
-				</div>
+				))}
 			</div>
 
 			{/*  Single project right section */}
@@ -94,14 +78,22 @@ const ProjectInfo = () => {
 				<p className="font-general-regular text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
 					{singleProjectData.ProjectInfo.ProjectDetailsHeading}
 				</p>
-				{singleProjectData.ProjectInfo.ProjectDetails.map((details) => {
+				{singleProjectData.ProjectInfo.ProjectDetails.map((details, index) => {
 					return (
-						<p
-							key={details.id}
-							className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-						>
-							{details.details}
-						</p>
+						<div key={`about-section-paragraph-${details.id}-${index}`}>
+							<p
+								className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+							>
+								{details.details}
+							</p>
+							{details.listItems && (
+								<ul className="list-disc">
+									{details.listItems.map((item, index) => (
+										<li className="text-white" key={`list-item-${index}`}> - {item}</li>
+									))}
+								</ul>
+							)}
+						</div>
 					);
 				})}
 			</div>

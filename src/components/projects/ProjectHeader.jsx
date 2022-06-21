@@ -5,7 +5,7 @@ import SingleProjectContext from '../../context/SingleProjectContext';
 const ProjectSingleHeader = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
 
-	return (
+	return singleProjectData ? (
 		<div>
 			<p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
 				{singleProjectData.ProjectHeader.title}
@@ -25,7 +25,14 @@ const ProjectSingleHeader = () => {
 				</div>
 			</div>
 		</div>
-	);
+	) : (
+		<div>
+			<p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
+				Project not found
+			</p>
+
+		</div>
+	)
 };
 
 export default ProjectSingleHeader;

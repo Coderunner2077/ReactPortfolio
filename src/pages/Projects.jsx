@@ -6,7 +6,7 @@ const Projects = () => {
 	return (
 		<ProjectsProvider>
 			<div className="container mx-auto">
-				<ProjectsGrid />
+				<ProjectsGrid count={99} />
 			</div>
 		</ProjectsProvider>
 	);
