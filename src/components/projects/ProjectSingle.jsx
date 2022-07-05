@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const ProjectSingle = ({ id, title, category, image }) => {
+	const { t } = useTranslation();
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -24,10 +26,10 @@ const ProjectSingle = ({ id, title, category, image }) => {
 					</div>
 					<div className="text-center px-4 py-6">
 						<p className="font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
-							{title}
+							{t(title)}
 						</p>
 						<span className="text-lg text-ternary-dark dark:text-ternary-light">
-							{category}
+							{t(category)}
 						</span>
 					</div>
 				</div>

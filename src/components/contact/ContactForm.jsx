@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from '../reusable/Button';
 import http from "../../utils/http";
-import { AiOutlineLoading } from "react-icons/ai";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
 	const [name, setName] = useState("");
@@ -9,6 +9,7 @@ const ContactForm = () => {
 	const [subject, setSubject] = useState("");
 	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState(false);
+	const { t } = useTranslation();
 
 	const handleReset = () => {
 		setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
@@ -30,14 +31,14 @@ const ContactForm = () => {
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
-						Contact Form
+						{t("form.title.contact")}
 					</p>
 					<div className="font-general-regular">
 						<label
 							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
 							htmlFor="name"
 						>
-							Full Name
+							{t("form.name")}
 						</label>
 						<input
 							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -45,7 +46,7 @@ const ContactForm = () => {
 							name="name"
 							type="text"
 							required
-							placeholder="Your Name"
+							placeholder={t("form.placeholder.subject")}
 							aria-label="Name"
 							value={name}
 							onChange={e => setName(e.target.value)}
@@ -56,7 +57,7 @@ const ContactForm = () => {
 							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
 							htmlFor="email"
 						>
-							Email
+							{t("form.email")}
 						</label>
 						<input
 							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -64,7 +65,7 @@ const ContactForm = () => {
 							name="email"
 							type="text"
 							required
-							placeholder="Your Email"
+							placeholder={t("form.placeholder.email")}
 							aria-label="Email"
 							value={email}
 							onChange={e => setEmail(e.target.value)}
@@ -75,7 +76,7 @@ const ContactForm = () => {
 							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
 							htmlFor="subject"
 						>
-							Subject
+							{t("form.subject")}
 						</label>
 						<input
 							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -83,7 +84,7 @@ const ContactForm = () => {
 							name="subject"
 							type="text"
 							required
-							placeholder="Subject"
+							placeholder={t("form.placeholder.subject")}
 							aria-label="Subject"
 							value={subject}
 							onChange={e => setSubject(e.target.value)}
@@ -95,7 +96,7 @@ const ContactForm = () => {
 							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
 							htmlFor="message"
 						>
-							Message
+							{t("form.message")}
 						</label>
 						<textarea
 							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -115,7 +116,7 @@ const ContactForm = () => {
 							aria-label="Send Message"
 							className="disabled:opacity-40"
 							disabled={loading}
-						>Send Message</button>
+						>{t("form.send.message")}</button>
 					</div>
 				</form>
 			</div>

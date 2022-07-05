@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import SingleProjectContext from '../../context/SingleProjectContext';
+import { useTranslation } from 'react-i18next';
 
 const ProjectRelatedProjects = () => {
+	const { t } = useTranslation();
 	const { singleProjectData, selectProjectData } = useContext(SingleProjectContext);
 
 	const switchProject = (project) => {
@@ -12,7 +14,7 @@ const ProjectRelatedProjects = () => {
 	return singleProjectData ? (
 		<div className="mt-10 pt-10 sm:pt-14 sm:mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
 			<p className="font-general-regular text-primary-dark dark:text-primary-light text-3xl font-bold mb-10 sm:mb-14 text-left">
-				{singleProjectData.RelatedProject.title}
+				{t(singleProjectData.RelatedProject.title)}
 			</p>
 
 			<div className="grid grid-cols-1 sm:grid-cols-4 gap-10">

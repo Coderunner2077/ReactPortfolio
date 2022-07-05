@@ -12,6 +12,7 @@ import Projects from './pages/Projects';
 import ProjectSingle from './pages/ProjectSingle';
 import { AnimatePresence } from 'framer-motion';
 import UseScrollToTop from './hooks/useScrollToTop';
+import "./i18n";
 
 function App() {
 	return (

@@ -15,50 +15,50 @@ import CProject from "../images/c-project.jpg";
 export const singleProjectData = [
 	{
 		ProjectHeader: {
-			title: 'Corunner Training Platform',
-			publishDate: 'Mai 20, 2022',
-			tags: 'Fullstack / React / Express / GraphQL',
+			title: 'data.corunner.title',
+			publishDate: 'data.corunner.date',
+			tags: 'data.corunner.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'Corunner React App',
+				title: 'data.corunner.title',
 				img: Corunner2,
 			},
 			{
 				id: 2,
-				title: 'Corunner React App',
+				title: 'data.corunner.title',
 				img: Corunner1,
 			},
 			{
 				id: 3,
-				title: 'Corunner React App',
+				title: 'data.corunner.title',
 				img: Corunner3,
 			},
 
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'Corunner Fullstack App',
+					title: 'data.name',
+					details: 'data.corunner.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'Web Application',
+					title: 'data.category',
+					details: 'category.web',
 				},
 				{
 					id: 3,
-					title: 'Website',
+					title: 'data.website',
 					details: 'https://corunner.app',
 				}
 			],
 			Technologies: [
 				{
-					title: 'Frontend Tools & Tech',
+					title: 'data.corunner.frontend_tools',
 					techs: [
 						'React',
 						'Redux',
@@ -71,7 +71,7 @@ export const singleProjectData = [
 					],
 				},
 				{
-					title: 'Backend Tools & Tech',
+					title: 'data.corunner.frontend_tools',
 					techs: [
 						'Node.js',
 						'Express',
@@ -86,54 +86,52 @@ export const singleProjectData = [
 				}
 
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Corunner is a Workout Network Platform. A place to schedule, share and plan your physical exercises and allow people from your town to join you.',
+					details: 'data.corunner.details_1',
 				},
 				{
 					id: 2,
-					details:
-						'Corunner is packed with exciting features, including the ability to:',
+					details: 'data.corunner.details_2',
 					listItems: [
-						"Create customized workout routes. Different display modes exists for the workout",
-						"Allow other users to join directly your workout by choosing Public mode",
-						"Allow only certain users to join your workout by choosing Protected mode that prompts users to apply first.",
-						"Plan your workout route just for yourself by choosing Private mode",
-						"Of course, you can apply to or join other users'workouts",
-						"Chat with users via real time private messages",
-						"Block users to prevent them from writing to you private messages"
+						"data.corunner.list.1",
+						"data.corunner.list.2",
+						"data.corunner.list.3",
+						"data.corunner.list.4",
+						"data.corunner.list.5",
+						"data.corunner.list.6",
+						"data.corunner.list.7"
 					]
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 2,
-					title: 'React Authentication Frontend',
-					category: 'MERN Project',
+					title: 'data.react.title',
+					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
 					id: 3,
-					title: 'Node Authentication Backend',
-					category: 'MERN Project',
+					title: 'data.node.title',
+					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
 					id: 4,
-					title: 'React Memory Game',
-					category: 'React Project',
+					title: 'data.memory.title',
+					category: 'projects.category.react',
 					img: ReactMemory,
 				},
 				{
 					id: 5,
-					title: 'Node Minichat',
-					category: 'Express Project',
+					title: 'data.minichat.title',
+					category: 'projects.category.express',
 					img: NodeSocketIO,
 				},
 			],
@@ -141,39 +139,39 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'React Authentication Frontend',
-			publishDate: 'Aug 16, 2021',
-			tags: 'React / Frontend / MERN',
+			title: 'data.react.title',
+			publishDate: 'data.react.date',
+			tags: 'data.react.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'React Member Space',
+				title: 'data.react.title',
 				img: ReactNodePassport,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'React Frontend',
+					title: 'data.name',
+					details: 'data.react.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'MERN Project',
+					title: 'data.category',
+					details: 'projects.category.mern',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/React-Node-OAuth2-frontend'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'React',
 						'HTML',
@@ -181,44 +179,38 @@ export const singleProjectData = [
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'React member space authentication project',
+					details: 'data.react.details_1',
 				},
 				{
 					id: 2,
 					details:
-						'This is the frontend of a MERN (MongoDB - Express - React - NodeJS) Project.'
+						'data.react.details_2'
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 3,
-					title: 'Node Authentication Backend',
-					category: 'MERN Project',
+					title: 'data.node.title',
+					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
 					id: 1,
-					title: 'Corunner Training Platform',
-					category: 'Web Application',
+					title: 'data.corunner.title',
+					category: 'projects.category.web',
 					img: Corunner2,
-					ProjectHeader: {
-						title: 'Project Management UI - From Context',
-						publishDate: 'Jul 26, 2021',
-						tags: 'Fullstack / React / NodeJS',
-					},
 				},
 				{
 					id: 4,
-					title: 'React Memory Game',
-					category: 'React Project',
+					title: 'data.memory.title',
+					category: 'projects.category.react',
 					img: ReactMemory,
 				},
 			],
@@ -226,39 +218,39 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'Node Authentication Backend',
-			publishDate: 'Aug 16, 2021',
-			tags: 'NodeJS / Express / Passport / MongoDB',
+			title: 'data.node.title',
+			publishDate: 'data.node.date',
+			tags: 'data.node.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'React Member Space',
+				title: 'data.node.title',
 				img: ReactNodePassport,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'Node Backend',
+					title: 'data.name',
+					details: 'data.node.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'MERN Project',
+					title: 'data.category',
+					details: 'projects.category.mern',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/React-Node-OAuth2-backend'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'Node',
 						'Express',
@@ -267,44 +259,38 @@ export const singleProjectData = [
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'React/Node member space authentication project',
+					details: 'data.node.details_1',
 				},
 				{
 					id: 2,
 					details:
-						'This is the backend of a MERN (MongoDB - Express - React - NodeJS) Project.'
+						'data.node.details_2'
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 2,
-					title: 'React Authentication Frontend',
-					category: 'MERN Project',
+					title: 'data.react.title',
+					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
 					id: 1,
-					title: 'Corunner Training Platform',
-					category: 'Web Application',
+					title: 'data.corunner.title',
+					category: 'projects.category.web',
 					img: Corunner2,
-					ProjectHeader: {
-						title: 'Project Management UI - From Context',
-						publishDate: 'Jul 26, 2021',
-						tags: 'Fullstack / React / NodeJS',
-					},
 				},
 				{
 					id: 5,
-					title: 'Node Minichat',
-					category: 'Express Project',
+					title: 'data.minichat.title',
+					category: 'projects.category.express',
 					img: NodeSocketIO,
 				},
 			],
@@ -312,14 +298,14 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'React Memory Game',
-			publishDate: 'April, 2021',
-			tags: 'React / Game',
+			title: 'data.memory.title',
+			publishDate: 'data.memory.date',
+			tags: 'data.memory.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'React Memory Game',
+				title: 'data.memory.title',
 				img: ReactMemory,
 			},
 			{
@@ -329,27 +315,27 @@ export const singleProjectData = [
 			}
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'React Memory Game',
+					title: 'data.name',
+					details: 'data.memory.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'React Project',
+					title: 'data.category',
+					details: 'projects.category.react',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/React-MemoryGame'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'React',
 						'HTML',
@@ -358,33 +344,31 @@ export const singleProjectData = [
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Simple React memory game project',
+					details: 'data.memory.details_1',
 				},
 				{
 					id: 2,
-					details:
-						'Player has to find the respective pairs of icons in the grid'
+					details: 'data.memory.details_2'
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 2,
-					title: 'React Authentication Frontend',
-					category: 'MERN Project',
+					title: 'data.react.title',
+					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
 					id: 8,
-					title: 'Java Pendu Game',
-					category: 'Java Project',
+					title: 'data.pendu.title',
+					category: 'projects.category.java',
 					img: JavaProject,
 				}
 			],
@@ -392,39 +376,39 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'Node Minichat',
-			publishDate: 'August 2020',
-			tags: 'NodeJS / Express / Socket.io / Ejs',
+			title: 'data.minichat.title',
+			publishDate: 'data.minichat.date',
+			tags: 'data.minichat.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'Node Minichat',
+				title: 'data.minichat.title',
 				img: ReactNodePassport,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'Node Minichat',
+					title: 'data.name',
+					details: 'data.minichat.title',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'Express Project',
+					title: 'data.category',
+					details: 'projects.category.express',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/Node-MiniChat'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'Node',
 						'Express',
@@ -433,27 +417,26 @@ export const singleProjectData = [
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Node Express Minichat project',
+					details: 'data.minichat.details_1',
 				},
 				{
 					id: 2,
 					details:
-						'This basic minichat uses socket.io to allow instant communication between users'
+						'data.minichat.details_2'
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 3,
-					title: 'Node Authentication Backend',
-					category: 'MERN Project',
+					title: 'data.node.title',
+					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 			],
@@ -461,39 +444,39 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'Symfony Social Network',
-			publishDate: 'May 2017 - Nov 2018',
-			tags: 'Symfony / PHP / Web Application',
+			title: 'data.symfony.title',
+			publishDate: 'data.symfony.date',
+			tags: 'data.symfony.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'Symfony Social Network',
+				title: 'data.symfony.title',
 				img: SymfonyPHP,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'Symfony Social Network',
+					title: 'data.name',
+					details: 'data.symfony.title',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'Symfony PHP Project',
+					title: 'data.category',
+					details: 'projects.category.symfony',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/Symfony-SocialNetwork'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'Symfony 4',
 						'PHP',
@@ -506,78 +489,72 @@ export const singleProjectData = [
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Social network allowing everyone to publish articles and/or posts.',
+					details: 'data.symfony.details_1',
 				},
 				{
 					id: 2,
 					details:
-						'Project created using the PHP language and the Symfony framework (Symfony 3 then migrated to Symfony 4)'
+						'data.symfony.details_2'
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 7,
-					title: 'PHP Member Space',
-					category: 'PHP Project',
+					title: 'data.php.title',
+					category: 'projects.category.php',
 					img: PhpProject,
 				},
 				{
 					id: 1,
-					title: 'Corunner Training Platform',
-					category: 'Web Application',
+					title: 'data.corunner.title',
+					category: 'projects.category.web',
 					img: Corunner2,
-					ProjectHeader: {
-						title: 'Project Management UI - From Context',
-						publishDate: 'Jul 26, 2021',
-						tags: 'Fullstack / React / NodeJS',
-					},
 				},
 			],
 		},
 	},
 	{
 		ProjectHeader: {
-			title: 'PHP Member Space',
-			publishDate: 'April 2017',
-			tags: 'PHP / Member Space',
+			title: 'data.php.title',
+			publishDate: 'data.php.date',
+			tags: 'data.php.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'PHP Member Space',
+				title: 'data.php.title',
 				img: PhpProject,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'PHP Member Space',
+					title: 'data.name',
+					details: 'data.php.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'PHP Project',
+					title: 'data.category',
+					details: 'projects.category.php',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: "https://github.com/Coderunner2077/PHP-EspaceMembre"
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'PHP',
 						'HTML',
@@ -586,33 +563,31 @@ export const singleProjectData = [
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Basic PHP member space for authentication',
+					details: 'data.php.details_1',
 				},
 				{
 					id: 2,
-					details:
-						'Project created as part of my PHP training'
+					details: 'data.php.details_2'
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 6,
-					title: 'Symfony Social Network',
-					category: 'Symfony PHP Project',
+					title: 'data.symfony.title',
+					category: 'projects.category.symfony',
 					img: SymfonyPHP,
 				},
 				{
 					id: 2,
-					title: 'React Authentication Frontend',
-					category: 'MERN Project',
+					title: 'data.react.title',
+					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 			],
@@ -620,72 +595,70 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'Java Pendu Game',
-			publishDate: 'December, 2016',
-			tags: 'Java / MVC / Game',
+			title: 'data.pendu.title',
+			publishDate: 'data.pendu.date',
+			tags: 'data.pendu.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'Java Pendu Game',
+				title: 'data.pendu.title',
 				img: JavaProject,
 			}
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'Java Pendu Game',
+					title: 'data.name',
+					details: 'data.pendu.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'Java Project',
+					title: 'data.category',
+					details: 'projects.category.java',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/Java-Pendu'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'Java',
 						'MVC'
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Java Hangman (Pendu) game. Player has to guess a word randomly chosen from a dictionnary',
+					details: 'data.pendu.details_1',
 				},
 				{
 					id: 2,
-					details:
-						"Project created as part of my Java training. This project uses MVC pattern."
+					details: 'data.pendu.details_2'
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 9,
-					title: 'Java Garage',
-					category: 'Java Project',
+					title: 'data.garage.title',
+					category: 'projects.category.java',
 					img: JavaProject,
 				},
 				{
 					id: 4,
-					title: 'React Memory Game',
-					category: 'React Project',
+					title: 'data.memory.title',
+					category: 'projects.category.react',
 					img: ReactMemory,
 				},
 			],
@@ -693,66 +666,64 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'Java Garage App',
-			publishDate: 'October, 2016',
-			tags: 'Java',
+			title: 'data.garage.title',
+			publishDate: 'data.garage.date',
+			tags: 'data.garage.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'Java Garage App',
+				title: 'data.garage.title',
 				img: JavaProject,
 			}
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'Java Garage App',
+					title: 'data.name',
+					details: 'data.garage.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'Java Project',
+					title: 'data.category',
+					details: 'projects.category.java',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/Java-TP-Garage'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'Java',
 						'Classes'
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Very basic garage management app',
+					details: 'data.garage.details_1',
 				},
 				{
 					id: 2,
-					details:
-						"Project created as part of my Java training. This project had helped me to fully grasp such concepts as classes, inheritance and implementing interfaces"
+					details: "data.garage.details_2"
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 8,
-					title: 'Java Pendu Game',
-					category: 'Java Project',
+					title: 'data.pendu.title',
+					category: 'projects.category.java',
 					img: JavaProject,
 				},
 			],
@@ -760,66 +731,64 @@ export const singleProjectData = [
 	},
 	{
 		ProjectHeader: {
-			title: 'Audio Player',
-			publishDate: 'October, 2016',
-			tags: 'C / Programming',
+			title: 'data.player.title',
+			publishDate: 'data.player.date',
+			tags: 'data.player.tags',
 		},
 		ProjectImages: [
 			{
 				id: 1,
-				title: 'Audio Player',
+				title: 'data.player.title',
 				img: CProject,
 			}
 		],
 		ProjectInfo: {
-			ClientHeading: 'About Project',
+			ClientHeading: 'about.project',
 			CompanyInfo: [
 				{
 					id: 1,
-					title: 'Name',
-					details: 'Audio Player',
+					title: 'data.name',
+					details: 'data.player.name',
 				},
 				{
 					id: 2,
-					title: 'Category',
-					details: 'C Project',
+					title: 'data.category',
+					details: 'projects.category.c',
 				},
 				{
 					id: 3,
-					title: 'Source Code',
+					title: 'data.source',
 					details: 'https://github.com/Coderunner2077/C-AudioPlayer'
 				}
 			],
 			Technologies: [
 				{
-					title: 'Tools & Technologies',
+					title: 'data.tools',
 					techs: [
 						'C',
 						'FMOD'
 					],
 				}
 			],
-			ProjectDetailsHeading: 'Description',
+			ProjectDetailsHeading: 'projects.heading',
 			ProjectDetails: [
 				{
 					id: 1,
-					details:
-						'Audio Player created with C programming language and FMOD library',
+					details: 'data.player.details_1',
 				},
 				{
 					id: 2,
-					details:
-						"Project created as part of my C training. C was the language that introduced me to coding. Even if I stopped programming in C, I think my knowledge of C was and still is a huge boost for my learning process of other languages"
+					details: "data.player.details_2"
 				},
 			],
 		},
 		RelatedProject: {
-			title: 'Related Projects',
+			title: 'projects.related',
 			Projects: [
 				{
 					id: 8,
-					title: 'Java Pendu Game',
-					category: 'Java Project',
+					title: 'data.pendu.title',
+					category: 'projects.category.java',
 					img: JavaProject,
 				},
 			],

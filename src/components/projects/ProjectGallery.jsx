@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
 import NotFound from "../../images/not-found.jpg";
+import { useTranslation } from "react-i18next";
 
 const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
+	const { t } = useTranslation();
 
 	return singleProjectData ? (
 		<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
@@ -13,7 +15,7 @@ const ProjectGallery = () => {
 						<img
 							src={project.img}
 							className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-							alt={project.title}
+							alt={t(project.title)}
 							key={`galery-project-${project.id}`}
 						/>
 					</div>
@@ -26,7 +28,7 @@ const ProjectGallery = () => {
 				<img
 					src={NotFound}
 					className="rounded-xl cursor-pointer shadow-lg sm:shadow-none w-96 h-96"
-					alt={"Not found"}
+					alt={t("main.project.not_found")}
 				/>
 			</div>
 

@@ -3,6 +3,7 @@ import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
+import { useTranslation } from 'react-i18next';
 
 const ProjectsGrid = ({ count = 6 }) => {
 	const {
@@ -15,11 +16,13 @@ const ProjectsGrid = ({ count = 6 }) => {
 		selectProjectsByCategory,
 	} = useContext(ProjectsContext);
 
+	const { t } = useTranslation();
+
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
 				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-					Projects portfolio
+					{t("projects.title")}
 				</p>
 			</div>
 
@@ -33,7 +36,7 @@ const ProjectsGrid = ({ count = 6 }) => {
                         mb-3
                         "
 				>
-					Search projects by title or filter by category
+					{t("projects.intro")}
 				</h3>
 				<div
 					className="
@@ -84,7 +87,7 @@ const ProjectsGrid = ({ count = 6 }) => {
 							name="name"
 							type="search"
 							required=""
-							placeholder="Search Projects"
+							placeholder={t("projects.search")}
 							aria-label="Name"
 						/>
 					</div>

@@ -1,0 +1,147 @@
+navbar:
+  projects: Projets
+  about: À propos
+  contact: Contact
+  hire: "Engagez moi"
+home:
+  hi: Bonjour, je suis Guillaume
+  position: Fullstack Développeur React / Node.js & Codeur à vie !
+main:
+  follow: Suivez moi
+  contact:
+    details: Coordonnées de contact
+  repo: Répositoire Github
+  project:
+    no_id: Aucune projet avec cet id n'existe
+    not_found: Aucun projet trouvé
+form:
+  title:
+    contact: Formulaire de contact
+    hire: Quel projet recherchez-vous ?
+  name: Nom et Prénom
+  email: Adresse e-mail
+  subject: Objet
+  message: Message
+  send:
+    message: Contacter
+    request: Envoyer
+  placeholder:
+    name: Votre Nom
+    email: Votre e-mail
+    subject: Objet
+  project:
+    app: Application Web
+    static: Site Statique
+    e_commerce: Boutique e-commerce
+    frontend: Frontend React
+    backend: Backend Node.js
+    ui: UX/UI Design
+    graphql: API GraphQL
+    rest: API REST
+projects:
+  title: Projets portfolio
+  intro: Rechercher des projets par titre ou filtrer par catégorie
+  search: Recherche de projets
+  more: Plus de Projets
+  heading: Description
+  related: Projets connexes
+  category:
+    all: Tous les Projets
+    web: Web Application
+    mern: Projet MERN
+    react: Projet React
+    express: Projet Express
+    symfony: Projet Symfony / PHP
+    php: Projet PHP
+    java: Projet Java
+    c: Projet C
+about:
+  project: A propos du Projet
+  bio1: Bonjour, je suis Guillaume Coderunner, un développeur full-stack & Coder for life ! J'adore travailler avec les technologies web et explorer l'écosystème JavaScript.
+  bio2: Je suis passionné par la programmation, la mise en œuvre de nouvelles technologies dans mes projets d'une manière créative. Mon objectif est de viser la perfection en utilisant les meilleures pratiques au mieux de mes capacités.
+  bio3: J'aime à la fois les côtés frontend et backend du développement. Étant un programmeur autodidacte, j'ai parcouru un long chemin en apprenant différents langages, notamment le C, le JAVA, le PHP et enfin l'écosystème React. Actuellement, je réalise des projets React et Node.js pour des clients, et pendant mon temps libre, j'apprends le framework Flutter.
+data:
+  name: Nom
+  category: Catégorie
+  website: Site Web
+  source: Code Source
+  tools: Outils & Technologies
+  corunner:
+    title: Plate-forme d'entraînement Corunner
+    name: Corunner Fullstack App
+    website: https://corunner.app
+    frontend_tools: Outils & Technologies Frontend
+    backend_tools: Outils & Technologies Backend
+    details_1: Corunner est une plateforme de réseau d'entraînement. Un endroit pour programmer, partager et planifier vos exercices physiques et permettre aux personnes de votre ville de vous rejoindre.
+    details_2: "Corunner regorge de fonctionnalités intéressantes, notamment la possibilité de :"
+    date: 20 mai 2022
+    tags: Fullstack / React / Express / GraphQL
+    list:
+      1: Créer des itinéraires d'entraînement personnalisés. Différents modes d'affichage existent pour l'entraînement
+      2: Permettre à d'autres utilisateurs de participer directement à votre séance d'entraînement en choisissant le mode public.
+      3: N'autoriser que certains utilisateurs à se joindre à votre séance d'entraînement en choisissant le mode protégé qui invite les utilisateurs à postuler d'abord.
+      4: Planifier votre parcours d'entraînement rien que pour vous en choisissant le mode privé.
+      5: Bien entendu, vous pouvez vous inscrire ou rejoindre les entraînements d'autres utilisateurs.
+      6: Communiquer avec les utilisateurs via des messages privés en temps réel
+      7: Bloquer des utilisateurs pour les empêcher de vous écrire des messages privés
+  react:
+    title: Authentification Frontend / React
+    name: Frontend React
+    date: 16 août 2021
+    tags: React / Frontend / MERN
+    details_1: Espace membre permettant aux utilisateurs de s'authentifier, de voir leur information stockée et de se déconnecter.
+    details_2: Il s'agit du frontend du projet MERN (MongoDB - Express - React - NodeJS).
+  node:
+    title: Authentification Backend / Node
+    date: 16 août 2021
+    name: Node Backend
+    tags: NodeJS / Express / Passport / MongoDB
+    details_1: API pour le projet Espace Membre Authentification.
+    details_2: Il s'agit du backend du projet MERN (MongoDB - Express - React - NodeJS).
+  memory:
+    title: Jeu de mémoire React
+    date: Avril 2021
+    name: Jeu de mémoire - React
+    tags: React / Jeu
+    details_1: Projet simple de jeu de mémoire en React
+    details_2: Le joueur doit trouver les paires d'icônes respectives dans la grille.
+  minichat:
+    title: Node Minichat
+    date: Août 2020
+    tags: NodeJS / Express / Socket.io / Ejs
+    details_1: Projet Node Express Minichat
+    details_2: Ce minichat de base utilise socket.io pour permettre une communication instantanée entre les utilisateurs.
+  symfony:
+    title: Réseau social en Symfony
+    date: Mai 2017 - Nov 2018
+    tags: Symfony / PHP / Web Application
+    details_1: Réseau social permettant à chacun de publier des articles et/ou des messages.
+    details_2: Projet créé en utilisant le langage PHP et le framework Symfony (Symfony 3 puis migré vers Symfony 4)
+  php:
+    title: Espace Membre en PHP
+    date: Avril 2017
+    name: PHP - Espace Membre
+    tags: PHP / Espace Membre
+    details_1: Espace membre PHP de base pour l'authentification
+    details_2: Projet créé dans le cadre de ma formation au PHP
+  pendu:
+    title: Jeu du pendu en Java
+    date: Décembre 2016
+    name: Java - Jeu du pendu
+    tags: Java / MVC / Jeu
+    details_1: Jeu du pendu en Java. Le joueur doit deviner un mot choisi au hasard dans un dictionnaire.
+    details_2: Projet créé dans le cadre de ma formation Java. Ce projet utilise le pattern MVC.
+  garage:
+    title: Garage en Java
+    date: Octobre 2016
+    name: Java - Application Garage
+    tags: Java
+    details_1: Application de gestion de garage très basique
+    details_2: Projet réalisé dans le cadre de ma formation au Java. Ce projet m'avait permis d'appréhender pleinement des concepts tels que les classes, l'héritage et l'implémentation d'interfaces.
+  player:
+    title: Lecteur Audio
+    date: Octobre, 2016
+    name: Lecteur Audio
+    tags: C / Programmation
+    details_1: Lecteur audio créé avec le langage de programmation C et la bibliothèque FMOD
+    details_2: Projet créé dans le cadre de ma formation au C. Le C est le langage qui m'a initié au codage. Même si j'ai arrêté de programmer en C, je pense que ma connaissance du C a été et est toujours un énorme atout pour mon processus d'apprentissage d'autres langages.

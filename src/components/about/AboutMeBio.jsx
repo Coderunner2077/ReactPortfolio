@@ -2,9 +2,11 @@ import React from "react";
 import profileImage from '../../images/profile.jpg';
 import { useContext } from 'react';
 import AboutMeContext from '../../context/AboutMeContext';
+import { useTranslation } from "react-i18next";
 
 const AboutMeBio = () => {
 	const { aboutMe } = useContext(AboutMeContext);
+	const { t } = useTranslation();
 
 	return (
 		<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
@@ -18,7 +20,7 @@ const AboutMeBio = () => {
 						className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
 						key={bio.id}
 					>
-						{bio.bio}
+						{t(bio.bio)}
 					</p>
 				))}
 			</div>

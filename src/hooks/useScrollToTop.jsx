@@ -29,7 +29,7 @@ const useScrollToTop = () => {
 		});
 	};
 
-	window.addEventListener('scroll', scrollToTop);
+	//window.addEventListener('scroll', scrollToTop);
 
 	return (
 		<>

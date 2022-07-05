@@ -1,17 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const selectOptions = [
-	'Web Application',
-	'MERN Project',
-	'React Project',
-	'Express Project',
-	'Symfony PHP Project',
-	'PHP Project',
-	'Java Project',
-	'C Project'
+	'projects.category.web',
+	'projects.category.mern',
+	'projects.category.react',
+	'projects.category.express',
+	'projects.category.symfony',
+	'projects.category.php',
+	'projects.category.java',
+	'projects.category.c'
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {
+	const { t } = useTranslation();
 	return (
 		<select
 			onChange={(e) => {
@@ -34,12 +36,12 @@ const ProjectsFilter = ({ setSelectProject }) => {
             "
 		>
 			<option value={""} className="text-sm sm:text-md">
-				All Projects
+				{t("projects.category.all")}
 			</option>
 
 			{selectOptions.map((option) => (
 				<option className="text-normal sm:text-md" key={`option-${option}`}>
-					{option}
+					{t(option)}
 				</option>
 			))}
 		</select>

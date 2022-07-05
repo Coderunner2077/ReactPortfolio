@@ -1,0 +1,147 @@
+navbar:
+  projects: Projects
+  about: About Me
+  contact: Contact
+  hire: Hire Me
+home:
+  hi: HI, I AM GUILLAUME
+  position: A React / Node.js Fullstack Developer & Coder for life!
+main:
+  follow: Follow me
+  project:
+    no_id: Project with this id does not exist
+    not_found: Project not found
+  contact:
+    details: Contact details
+  repo: Github Repository
+form:
+  title:
+    contact: Contact Form
+    hire: What project are you looking for?
+  name: Full Name
+  email: Email
+  subject: Subject
+  message: Message
+  send:
+    message: Send Message
+    request: Send Request
+  placeholder:
+    name: Your Name
+    email: Your Email
+    subject: Subject
+  project:
+    app: Web Application
+    static: Static Site
+    e_commerce: Ecommerce Store
+    frontend: React Frontend
+    backend: Node.js Backend
+    ui: UI/UX Design
+    graphql: GraphQL API
+    rest: REST API
+projects:
+  title: Projects portfolio
+  intro: Search projects by title or filter by category
+  search: Search Projects
+  more: More Projects
+  heading: Description
+  related: Related Projects
+  category:
+    all: All Projects
+    web: Web Application
+    mern: MERN Project
+    react: React Project
+    express: Express Project
+    symfony: Symfony PHP Project
+    php: PHP Project
+    java: Java Project
+    c: C Project
+about:
+  project: About Project
+  bio1: Hi, I'm Guillaume Coderunner, a full-stack developer & Coder for life! I love working with web technologies and exploring the JavaScript ecosystem.
+  bio2: I am passionate about programming, implementing new technologies in my projects in a creative way. My goal is to thrive for perfection by using the best practices to the best of my ability.
+  bio3: I like both frontend and backend sides of the development. Being a self-taught programmer, I've come a long way learning different languages, including C, JAVA, PHP, and finally React ecosystem. Currently I'm doing React and Node.js projects for clients, and in my free time I'm learning Flutter framework
+data:
+  name: Name
+  category: Category
+  website: Website
+  source: Source Code
+  tools: Tools & Technologies
+  corunner:
+    title: Corunner Workout Platform
+    name: Corunner Fullstack App
+    website: https://corunner.app
+    frontend_tools: Frontend Tools & Tech
+    backend_tools: Backend Tools & Tech
+    details_1: Corunner is a Workout Network Platform. A place to schedule, share and plan your physical exercises and allow people from your town to join you.
+    details_2: "Corunner is packed with exciting features, including the ability to:"
+    date: Mai 20, 2022
+    tags: Fullstack / React / Express / GraphQL
+    list:
+      1: Create customized workout routes. Different display modes exists for the workout
+      2: Allow other users to join directly your workout by choosing Public mode
+      3: Allow only certain users to join your workout by choosing Protected mode that prompts users to apply first.
+      4: Plan your workout route just for yourself by choosing Private mode
+      5: Of course, you can apply to or join other users'workouts
+      6: Chat with users via real time private messages
+      7: Block users to prevent them from writing to you private messages
+  react:
+    title: React Authentication Frontend
+    name: React Frontend
+    date: Aug 16, 2021
+    tags: React / Frontend / MERN
+    details_1: Member space allowing users to authenticate, view their stored information and log out.
+    details_2: This is the frontend of the MERN (MongoDB - Express - React - NodeJS) Projet.
+  node:
+    title: Node Authentication Backend
+    date: Aug 16, 2021
+    name: Node Backend
+    tags: NodeJS / Express / Passport / MongoDB
+    details_1: API for the Member Space Authentication project.
+    details_2: This is the backend of the MERN (MongoDB - Express - React - NodeJS) Project.
+  memory:
+    title: React Memory Game
+    date: April, 2021
+    name: React Memory Game
+    tags: React / Game
+    details_1: Simple React memory game project
+    details_2: Player has to find the respective pairs of icons in the grid
+  minichat:
+    title: Node Minichat
+    date: August 2020
+    tags: NodeJS / Express / Socket.io / Ejs
+    details_1: Node Express Minichat project
+    details_2: This basic minichat uses socket.io to allow instant communication between users
+  symfony:
+    title: Symfony Social Network
+    date: May 2017 - Nov 2018
+    tags: Symfony / PHP / Web Application
+    details_1: Social network allowing everyone to publish articles and/or posts.
+    details_2: Project created using the PHP language and the Symfony framework (Symfony 3 then migrated to Symfony 4)
+  php:
+    title: PHP Member Space
+    date: April 2017
+    name: PHP Member Space
+    tags: PHP / Member Space
+    details_1: Basic PHP member space for authentication
+    details_2: Project created as part of my PHP training
+  pendu:
+    title: Java Hangman Game
+    date: December, 2016
+    name: Java - Hangman Game
+    tags: Java / MVC / Game
+    details_1: Java Hangman game. Player has to guess a word randomly chosen from a dictionnary
+    details_2: Project created as part of my Java training. This project uses MVC pattern.
+  garage:
+    title: Java Garage
+    date: October, 2016
+    name: Java Garage App
+    tags: Java
+    details_1: Very basic garage management app
+    details_2: Project created as part of my Java training. This project had helped me to fully grasp such concepts as classes, inheritance and implementing interfaces
+  player:
+    title: Audio Player
+    date: October, 2016
+    name: Audio Player
+    tags: C / Programming
+    details_1: Audio Player created with C programming language and FMOD library
+    details_2: Project created as part of my C training. C was the language that introduced me to coding. Even if I stopped programming in C, I think my knowledge of C was and still is a huge boost for my learning process of other languages

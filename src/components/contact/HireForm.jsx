@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import http from "../../utils/http";
+import { useTranslation } from "react-i18next";
 
 const selectOptions = [
-    'Web Application',
-    'React Project',
-    'Node.js Project',
-    'UI/UX Design'
+    'form.project.app',
+    'form.project.static',
+    'form.project.e_commerce',
+    'form.project.frontend',
+    'form.project.backend',
+    'form.project.ui',
+    'form.project.graphql',
+    'form.project.rest'
+
 ];
 
 const HireForm = () => {
@@ -14,6 +20,7 @@ const HireForm = () => {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
+    const { t } = useTranslation();
 
     const handleReset = () => {
         setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
@@ -34,14 +41,14 @@ const HireForm = () => {
                     className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
                 >
                     <h5 className=" text-primary-dark dark:text-primary-light text-2xl mb-6">
-                        What project are you looking for?
+                        {t("form.title.hire")}
                     </h5>
                     <div className="font-general-regular">
                         <label
                             className="block text-lg text-primary-dark dark:text-primary-light mb-2"
                             htmlFor="name"
                         >
-                            Full Name
+                            {t("form.name")}
                         </label>
                         <input
                             className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -49,7 +56,7 @@ const HireForm = () => {
                             name="name"
                             type="text"
                             required
-                            placeholder="Your Name"
+                            placeholder={t("form.placeholder.name")}
                             aria-label="Name"
                             value={name}
                             onChange={e => setName(e.target.value)}
@@ -60,7 +67,7 @@ const HireForm = () => {
                             className="block text-lg text-primary-dark dark:text-primary-light mb-2"
                             htmlFor="email"
                         >
-                            Email
+                            {t("form.email")}
                         </label>
                         <input
                             className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -68,7 +75,7 @@ const HireForm = () => {
                             name="email"
                             type="text"
                             required
-                            placeholder="Your Email"
+                            placeholder={t("form.placeholder.email")}
                             aria-label="Email"
                             value={email}
                             onChange={e => setEmail(e.target.value)}
@@ -90,7 +97,7 @@ const HireForm = () => {
                                     key={option}
                                     value={option}
                                 >
-                                    {option}
+                                    {t(option)}
                                 </option>
                             ))}
                         </select>
@@ -101,7 +108,7 @@ const HireForm = () => {
                             className="block text-lg text-primary-dark dark:text-primary-light mb-2"
                             htmlFor="message"
                         >
-                            Message
+                            {t("form.message")}
                         </label>
                         <textarea
                             className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -130,7 +137,7 @@ const HireForm = () => {
                                         rounded-md
                                         focus:ring-1 focus:ring-indigo-900 duration-500"
                             disabled={loading}
-                        >Send Request</button>
+                        > {t("form.send.request")}</button>
                     </div>
                 </form>
             </div>

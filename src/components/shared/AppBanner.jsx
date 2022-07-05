@@ -4,9 +4,11 @@ import { FiArrowDownCircle } from 'react-icons/fi';
 import developerLight from '../../images/developer.svg';
 import developerDark from '../../images/developer-dark.svg';
 import { motion } from 'framer-motion';
+import { useTranslation } from "react-i18next";
 
 const AppBanner = () => {
 	const [activeTheme] = useThemeSwitcher();
+	const { t } = useTranslation();
 
 	return (
 		<motion.section
@@ -26,7 +28,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
 				>
-					Hi, I am Guillaume
+					{t("home.hi")}
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0 }}
@@ -38,7 +40,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					A React / Node.js Fullstack Developer & Coder for life!
+					{t("home.position")}
 				</motion.p>
 			</div>
 			<motion.div
