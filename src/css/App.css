@@ -1,4 +1,4 @@
-/*== 
+/*==
  * React & TailwindCSS Portfolio Main CSS File
  * Powered by: @realstoman
 */
@@ -218,6 +218,21 @@ body {
 	animation: fadeIn 0.3s;
 	transition: opacity 0.4s;
 	opacity: 0.9;
+}
+
+.translate-switcher {
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	height: 20px;
+	justify-content: center;
+	z-index: 999;
+	cursor: pointer;
+	transition: opacity 0.4s;
+}
+
+.translate-switcher:hover {
+	opacity: 1;
 }
 
 .scrollToTop:hover {

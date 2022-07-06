@@ -15,10 +15,14 @@ i18n
     .use(Backend)
     .init({
         debug: true,
+        whitelist: ["fr", "en"],
+        nonExplicitWhitelist: true,
+        load: "languageOnly",
         fallbackLng: {
             'fr-FR': ['fr'],
             'default': ['en']
         },
+
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
         },
