@@ -145,3 +145,11 @@ data:
     tags: C / Programming
     details_1: Audio Player created with C programming language and FMOD library
     details_2: Project created as part of my C training. C was the language that introduced me to coding. Even if I stopped programming in C, I think my knowledge of C was and still is a huge boost for my learning process of other languages
+flash:
+  error:
+    server: Oops, Sorry! A server error occured. Please try again later.
+    network: Oops, Sorry! A network error occured. Please try again later.
+    mode: This action is only available in production environment
+  success:
+    hire: We've received your request and will get back to you within 48 hours. Thank you!
+    contact: We've received your message and will get back to you within 48 hours. Thank you!

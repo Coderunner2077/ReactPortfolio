@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Button from '../reusable/Button';
-import http from "../../utils/http";
 import { useTranslation } from "react-i18next";
+import http from "../../utils/http";
+import { formatError } from "../../utils";
+import { useDispatch } from "react-redux";
+import { addAlert } from "../../store/actions";
 
 const ContactForm = () => {
 	const [name, setName] = useState("");
@@ -10,6 +12,7 @@ const ContactForm = () => {
 	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState(false);
 	const { t } = useTranslation();
+	const disptach = useDispatch();
 
 	const handleReset = () => {
 		setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
@@ -19,8 +22,8 @@ const ContactForm = () => {
 		setLoading(true);
 		e.preventDefault();
 		http.post("/contact", { name, email, subject, message })
-			.then(() => handleReset())
-			.catch(err => console.log("Error", err));
+			.then((res) => { dispatch(addAlert([{ type: "success", message: t(res.data.message) }])); handleReset() })
+			.catch(err => { dispatch(addAlert([{ type: "error", message: t(formatError(err)) }])); });
 	}
 
 	return (

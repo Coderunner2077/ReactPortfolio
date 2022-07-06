@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import http from "../../utils/http";
 import { useTranslation } from "react-i18next";
+import { addAlert } from "../../store/actions";
+import { useDispatch } from "react-redux";
+import { formatError } from "../../utils";
 
 const selectOptions = [
     'form.project.app',
@@ -21,6 +24,7 @@ const HireForm = () => {
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const { t } = useTranslation();
+    const dispatch = useDispatch();
 
     const handleReset = () => {
         setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
@@ -30,17 +34,17 @@ const HireForm = () => {
         setLoading(true);
         e.preventDefault();
         http.post("/hire", { name, email, subject, message })
-            .then(() => handleReset())
-            .catch(err => { console.log("Error", err); handleReset(); });
+            .then((res) => { dispatch(addAlert([{ type: "success", message: t(res.data.message) }])); handleReset() })
+            .catch(err => { dispatch(addAlert([{ type: "error", message: t(formatError(err)) }])); });
     }
     return (
-        <div className="w-full lg:w-1/2">
-            <div className="leading-loose">
+        <div className="w-full h-full">
+            <div className="">
                 <form
                     onSubmit={handleSubmit}
-                    className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
+                    className="max-w-xl m-4 p-2 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
                 >
-                    <h5 className=" text-primary-dark dark:text-primary-light text-2xl mb-6">
+                    <h5 className=" text-primary-dark dark:text-primary-light text-2xl mb-2">
                         {t("form.title.hire")}
                     </h5>
                     <div className="font-general-regular">
@@ -62,7 +66,7 @@ const HireForm = () => {
                             onChange={e => setName(e.target.value)}
                         />
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-2">
                         <label
                             className="block text-lg text-primary-dark dark:text-primary-light mb-2"
                             htmlFor="email"
@@ -81,7 +85,7 @@ const HireForm = () => {
                             onChange={e => setEmail(e.target.value)}
                         />
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-2">
                         <select
                             className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
                             id="subject"
@@ -103,7 +107,7 @@ const HireForm = () => {
                         </select>
                     </div>
 
-                    <div className="mt-6">
+                    <div className="mt-2">
                         <label
                             className="block text-lg text-primary-dark dark:text-primary-light mb-2"
                             htmlFor="message"
@@ -115,17 +119,18 @@ const HireForm = () => {
                             id="message"
                             name="message"
                             cols="14"
-                            rows="6"
+                            rows="5"
                             aria-label="Message"
                             value={message}
                             onChange={e => setMessage(e.target.value)}
+                            required
                         ></textarea>
                     </div>
 
-                    <div className="mt-6 pb-4 sm:pb-1">
+                    <div className="mt-2 pb-2 sm:pb-1">
                         <button
                             type="submit"
-                            aria-label="Send Request"
+                            aria-label={t("form.send.request")}
                             className="disabled:opacity-40 relative
                                         px-4
                                         sm:px-6
@@ -137,7 +142,7 @@ const HireForm = () => {
                                         rounded-md
                                         focus:ring-1 focus:ring-indigo-900 duration-500"
                             disabled={loading}
-                        > {t("form.send.request")}</button>
+                        >{t("form.send.request")}</button>
                     </div>
                 </form>
             </div>

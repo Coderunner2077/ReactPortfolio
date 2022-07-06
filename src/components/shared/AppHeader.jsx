@@ -6,12 +6,15 @@ import logoG from "../../images/logo-g.png";
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 import { useTranslation } from 'react-i18next';
+import { showModal } from "../../store/actions";
+import { useDispatch } from "react-redux";
+import HireForm from "../contact/HireForm";
 
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
-	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
 	const { t } = useTranslation();
+	const dispatch = useDispatch();
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -21,18 +24,8 @@ const AppHeader = () => {
 		}
 	}
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
+	const showHireMeModal = e => {
+		dispatch(showModal({ body: <HireForm /> }));
 	}
 
 	return (
@@ -107,7 +100,7 @@ const AppHeader = () => {
 				<div
 					className={
 						showMenu
-							? 'block m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none'
+							? 'block m-0 sm:ml-4 mt-5 sm:mt-3 sm:hidden p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none'
 							: 'hidden'
 					}
 				>
@@ -135,8 +128,8 @@ const AppHeader = () => {
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<span
 							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
-							aria-label="Hire Me Button"
+							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-2 py-2 mt-2 duration-300 w-24"
+							aria-label={`${t("navbar.hire")} Button`}
 						>
 							<Button title={t("navbar.hire")} />
 						</span>
@@ -144,24 +137,24 @@ const AppHeader = () => {
 				</div>
 
 				{/* Header links large screen */}
-				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
+				<div className="font-general-medium hidden m-0 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none sm:space-x-2 md:space-x-4">
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left md:text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light mb-2 sm:py-2"
 						aria-label="Projects"
 					>
 						{t("navbar.projects")}
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left md:text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light mb-2 sm:py-2"
 						aria-label="About Me"
 					>
 						{t("navbar.about")}
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light mb-2 sm:py-2"
 						aria-label="Contact"
 					>
 						{t("navbar.contact")}
@@ -169,27 +162,24 @@ const AppHeader = () => {
 				</div>
 
 				{/* Header right section buttons */}
-				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-					<div className="hidden md:flex">
-						<Link
-							to="/hire"
-							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-							aria-label="Hire Me"
-						>
-							<Button title={t("navbar.hire")} />
-						</Link>
-					</div>
-
+				<div className="hidden sm:flex justify-between items-center sm:space-x-1 md:space-x-2 lg:space-x-4">
+					<span
+						onClick={showHireMeModal}
+						className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-0.5 md:px-2 lg:px-4 py-2.5 duration-300"
+						aria-label="Hire Me Button"
+					>
+						<Button title={t("navbar.hire")} />
+					</span>
 					{/* Theme switcher large screen */}
 					<div
 						onClick={() => setTheme(activeTheme)}
 						aria-label="Theme Switcher"
-						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+						className="bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
 						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light md:text-xl" />
 						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+							<FiSun className="text-gray-200 hover:text-gray-50 md:text-xl" />
 						)}
 					</div>
 				</div>

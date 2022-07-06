@@ -12,12 +12,16 @@ import Projects from './pages/Projects';
 import ProjectSingle from './pages/ProjectSingle';
 import { AnimatePresence } from 'framer-motion';
 import UseScrollToTop from './hooks/useScrollToTop';
+import Modal from "./components/modal";
+import Alert from "./components/alert";
 import "./i18n";
 
 function App() {
 	return (
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
+				<Modal />
+				<Alert />
 				<Router>
 					<ScrollToTop />
 					<AppHeader />

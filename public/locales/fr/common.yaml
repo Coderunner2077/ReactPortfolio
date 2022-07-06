@@ -145,3 +145,11 @@ data:
     tags: C / Programmation
     details_1: Lecteur audio créé avec le langage de programmation C et la bibliothèque FMOD
     details_2: Projet créé dans le cadre de ma formation au C. Le C est le langage qui m'a initié au codage. Même si j'ai arrêté de programmer en C, je pense que ma connaissance du C a été et est toujours un énorme atout pour mon processus d'apprentissage d'autres langages.
+flash:
+  error:
+    server: Oups, désolé ! Une erreur de serveur s'est produite. Veuillez réessayer plus tard.
+    network: Oups, désolé ! Une erreur de réseau s'est produite. Veuillez réessayer plus tard.
+    mode: Cette action n'est disponible que dans un environnement de production
+  success:
+    hire: Nous avons bien reçu votre demande et nous vous contacterons dans les 48 heures. Merci !
+    contact: Nous avons bien reçu votre message et nous vous contacterons dans les 48 heures. Merci !

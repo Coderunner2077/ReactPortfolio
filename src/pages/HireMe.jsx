@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from 'framer-motion';
-import ContactDetails from '../components/contact/ContactDetails';
 import HireForm from '../components/contact/HireForm';
 
 const HireMe = () => {

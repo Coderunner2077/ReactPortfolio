@@ -6,8 +6,53 @@
     img.header-logo {
         @apply w-20 sm:w-36;
     }
-}
 
-img.header-logo {
-    @apply w-20 sm:w-36 hidden;
+    .flex-y {
+        @apply flex flex-col justify-start items-center;
+    }
+
+    .flex-x {
+        @apply flex flex-row justify-center items-center;
+    }
+
+    .modal {
+        @apply bg-blue-200 shadow z-100 relative m-auto rounded-3xl pb-2
+        max-h-screen max-w-full;
+    }
+
+    .btn-gray-line {
+        @apply bg-transparent text-gray-600 shadow-none border-none hover:font-semibold hover:text-gray-800;
+    }
+
+    .btn-white {
+        @apply bg-white text-blue-900 hover:bg-blue-800 hover:text-white;
+    }
+
+    .btn-icon {
+        @apply flex items-center justify-center rounded-3xl hover:rounded-xl transition-all
+            duration-200 ease-linear cursor-pointer focus:outline-none shadow-none;
+    }
+
+    .popup {
+        @apply absolute w-auto p-2 m-2 min-w-max rounded-md shadow-md text-white bg-gray-900 text-xs
+         font-semibold transition-all duration-100 transform scale-0 origin-left z-100;
+    }
+
+    .alert {
+        @apply flex items-start sm:items-center justify-between p-1 sm:p-4 rounded-3xl transition-all duration-100 pointer-events-auto;
+    }
+
+    .alert-success {
+        @apply border border-green-400 bg-green-300 text-green-900;
+    }
+
+    .alert-danger {
+        @apply border border-red-400 bg-red-300 text-red-900;
+    }
+
+    .btn-close {
+        @apply bg-transparent shadow-none hover:font-semibold hover:scale-110;
+    }
+
+
 }
