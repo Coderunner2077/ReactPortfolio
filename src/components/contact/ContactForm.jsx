@@ -12,7 +12,7 @@ const ContactForm = () => {
 	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState(false);
 	const { t } = useTranslation();
-	const disptach = useDispatch();
+	const dispatch = useDispatch();
 
 	const handleReset = () => {
 		setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
