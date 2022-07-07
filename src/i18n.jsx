@@ -14,7 +14,6 @@ i18n
     // for all options read: https://www.i18next.com/overview/configuration-options
     .use(Backend)
     .init({
-        debug: true,
         whitelist: ["fr", "en"],
         nonExplicitWhitelist: true,
         load: "languageOnly",

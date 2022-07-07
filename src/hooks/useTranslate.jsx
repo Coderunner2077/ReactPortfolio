@@ -15,7 +15,6 @@ const useTranslate = () => {
     const { i18n } = useTranslation();
 
     useEffect(() => {
-        console.log("i18n.languages", i18n.languages);
         setIsFrench(i18n.languages[0] === "fr");
         window.addEventListener('scroll', onScroll);
         return function cleanup() {
