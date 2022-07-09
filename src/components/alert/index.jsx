@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import ReactDOM from "react-dom";
 import { deleteAlerts } from "../../store/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { AlertMessage } from "../UI";
 import { motion } from "framer-motion";
+import { BiRestaurant } from "react-icons/bi";
 
 const Alert = () => {
 	const alerts = useSelector((state) => state.flash.alerts);
@@ -44,6 +45,19 @@ const Alert = () => {
 		}, 300);
 	};
 
+	function uniqByKeepLast(a, key) {
+		return [
+			...new Map(
+				a.map(x => [key(x), x])
+			).values()
+		]
+	}
+
+	const uniqueAlerts = useMemo(() => {
+		if (!activeAlerts || activeAlerts.length < 2) return activeAlerts;
+		return uniqByKeepLast(activeAlerts, a => a.message);
+	}, [activeAlerts]);
+
 	if (!alerts) return null;
 
 	return ReactDOM.createPortal(
@@ -60,7 +74,7 @@ const Alert = () => {
 			initial="hidden"
 			animate="show"
 			className="fixed top-16 sm:top-20 left-0 w-full h-auto z-1050 bg-transparent flex-y pointer-events-none">
-			{activeAlerts?.map((alert, index) => (
+			{uniqueAlerts?.map((alert, index) => (
 				<AlertMessage
 					key={index}
 					type={alert.type}

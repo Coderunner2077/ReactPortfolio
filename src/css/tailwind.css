@@ -54,5 +54,11 @@
         @apply bg-transparent shadow-none hover:font-semibold hover:scale-110;
     }
 
+    .btn {
+        @apply px-4 py-2.5 rounded-lg text-center font-medium tracking-wider;
+    }
 
+    .btn-purple {
+        @apply  text-white  bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900;
+    }
 }

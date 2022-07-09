@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import http from "../../utils/http";
 import { useTranslation } from "react-i18next";
 import { addAlert } from "../../store/actions";
 import { useDispatch } from "react-redux";
 import { formatError } from "../../utils";
+import LoadingButton from "../reusable/LoadingButton";
 
 const selectOptions = [
     'form.project.app',
@@ -26,6 +27,19 @@ const HireForm = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
 
+    const timerRef = useRef();
+
+    const resetButton = () => {
+        clearTimeout(timerRef.current);
+        timerRef.current = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }
+
+    useEffect(() => {
+        return () => clearTimeout(timerRef.current);
+    });
+
     const handleReset = () => {
         setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
     }
@@ -35,7 +49,7 @@ const HireForm = () => {
         e.preventDefault();
         http.post("/hire", { name, email, subject, message })
             .then((res) => { dispatch(addAlert([{ type: "success", message: t(res.data.message) }])); handleReset() })
-            .catch(err => { dispatch(addAlert([{ type: "error", message: t(formatError(err)) }])); });
+            .catch(err => { dispatch(addAlert([{ type: "error", message: t(formatError(err)) }])); resetButton(); });
     }
     return (
         <div className="w-full h-full">
@@ -128,21 +142,9 @@ const HireForm = () => {
                     </div>
 
                     <div className="mt-2 pb-2 sm:pb-1">
-                        <button
-                            type="submit"
-                            aria-label={t("form.send.request")}
-                            className="disabled:opacity-40 relative
-                                        px-4
-                                        sm:px-6
-                                        py-2
-                                        sm:py-2.5
-                                        text-white
-                                        bg-indigo-500
-                                        hover:bg-indigo-600
-                                        rounded-md
-                                        focus:ring-1 focus:ring-indigo-900 duration-500"
-                            disabled={loading}
-                        >{t("form.send.request")}</button>
+                        <LoadingButton width={160} loading={loading} top="15px">
+                            {t("form.send.request")}
+                        </LoadingButton>
                     </div>
                 </form>
             </div>

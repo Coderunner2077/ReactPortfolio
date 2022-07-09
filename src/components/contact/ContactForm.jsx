@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import http from "../../utils/http";
 import { formatError } from "../../utils";
 import { useDispatch } from "react-redux";
 import { addAlert } from "../../store/actions";
+import LoadingButton from "../reusable/LoadingButton";
 
 const ContactForm = () => {
 	const [name, setName] = useState("");
@@ -13,17 +14,29 @@ const ContactForm = () => {
 	const [loading, setLoading] = useState(false);
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
+	const timerRef = useRef();
 
-	const handleReset = () => {
-		setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
+	const resetButton = () => {
+		clearTimeout(timerRef.current);
+		timerRef.current = setTimeout(() => {
+			setLoading(false);
+		}, 2000);
 	}
+
+	useEffect(() => {
+		return () => clearTimeout(timerRef.current);
+	});
 
 	const handleSubmit = e => {
 		setLoading(true);
 		e.preventDefault();
 		http.post("/contact", { name, email, subject, message })
 			.then((res) => { dispatch(addAlert([{ type: "success", message: t(res.data.message) }])); handleReset() })
-			.catch(err => { dispatch(addAlert([{ type: "error", message: t(formatError(err)) }])); });
+			.catch(err => { dispatch(addAlert([{ type: "error", message: t(formatError(err)) }])); resetButton(); });
+	}
+
+	const handleReset = () => {
+		setName(""); setEmail(""); setSubject(""); setMessage(""); setLoading(false);
 	}
 
 	return (
@@ -49,7 +62,7 @@ const ContactForm = () => {
 							name="name"
 							type="text"
 							required
-							placeholder={t("form.placeholder.subject")}
+							placeholder={t("form.placeholder.name")}
 							aria-label="Name"
 							value={name}
 							onChange={e => setName(e.target.value)}
@@ -112,14 +125,10 @@ const ContactForm = () => {
 							onChange={e => setMessage(e.target.value)}
 						></textarea>
 					</div>
-
-					<div className="font-general-medium w-40 px-4 py-2.5 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
-						<button
-							type="submit relative"
-							aria-label="Send Message"
-							className="disabled:opacity-40"
-							disabled={loading}
-						>{t("form.send.message")}</button>
+					<div className="mt-6">
+						<LoadingButton width={160} loading={loading}>
+							{t("form.send.message")}
+						</LoadingButton>
 					</div>
 				</form>
 			</div>
