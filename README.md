@@ -95,6 +95,15 @@ npm install --global yarn
 yarn start
 ```
 
+9. ##### Start a local producion server at `http://localhost:8081`:
+
+...
+yarn build
+yarn serve
+....
+
+The production port is 8081. In order to change it, update 'preview.port' in vite.config.js
+
 ## Notes
 
 -   Always run `yarn install` after pulling new changes
