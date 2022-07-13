@@ -48,28 +48,28 @@ git clone https://github.com/Coderunner2077/ReactPortfolio.git
 
 3. ##### Related Projects:
 
-...
+
 For full functionality, make sure to install the Node.js/Express backend so that emails can be sent (not compulsory + requires having a working Unix mail server that be sender-only eventually):
 [React Portfolio Backend](https://github.com/Coderunner2077/PortfolioBackend)
 
 This project is an upgrade of an existing repo:  [Realstoman React Portfolio](https://github.com/realstoman/react-tailwindcss-portfolio)
 
-...
+```
 Major upgrade details:
 -   Added translations
 -   Redux for modals (+ flash alerts)
 -   And added backend for sending emails
 -   Migrrated the project from CRA to Vite
-...
+```
 
 4. ##### Enviroment Variables:
 
-...
+```
 If you are going to install the backend api, you will need the following envorment variables:
 
 VITE_API_ENDPOINT -> Working URL of the backend api
 VITE_MODE -> Production enviroment variables (development/production)
-...
+```
 
 5. ##### Open the project folder:
 
@@ -97,13 +97,13 @@ yarn start
 
 9. ##### Start a local producion server at `http://localhost:8081`:
 
-...
+```
 yarn build
 yarn serve
-....
-
+```
+```
 The production port is 8081. In order to change it, update 'preview.port' in vite.config.js
-
+```
 ## Notes
 
 -   Always run `yarn install` after pulling new changes
