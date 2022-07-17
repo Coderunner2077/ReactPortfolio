@@ -74,7 +74,7 @@ data:
     backend_tools: Outils & Technologies Backend
     details_1: Corunner est une plateforme de réseau d'entraînement. Un endroit pour programmer, partager et planifier vos exercices physiques et permettre aux personnes de votre ville de vous rejoindre.
     details_2: "Corunner regorge de fonctionnalités intéressantes, notamment la possibilité de :"
-    date: 20 mai 2022
+    date: Août 2021 - Mai 2022
     tags: Fullstack / React / Express / GraphQL
     list:
       1: Créer des itinéraires d'entraînement personnalisés. Différents modes d'affichage existent pour l'entraînement
@@ -87,20 +87,20 @@ data:
   react:
     title: Authentification Frontend / React
     name: Frontend React
-    date: 16 août 2021
+    date: Juillet 2021
     tags: React / Frontend / MERN
     details_1: Espace membre permettant aux utilisateurs de s'authentifier, de voir leur information stockée et de se déconnecter.
     details_2: Il s'agit du frontend du projet MERN (MongoDB - Express - React - NodeJS).
   node:
     title: Authentification Backend / Node
-    date: 16 août 2021
+    date: Juillet 2021
     name: Node Backend
     tags: NodeJS / Express / Passport / MongoDB
     details_1: API pour le projet Espace Membre Authentification.
     details_2: Il s'agit du backend du projet MERN (MongoDB - Express - React - NodeJS).
   memory:
     title: Jeu de mémoire React
-    date: Avril 2021
+    date: Juillet 2020
     name: Jeu de mémoire - React
     tags: React / Jeu
     details_1: Projet simple de jeu de mémoire en React
@@ -113,7 +113,7 @@ data:
     details_2: Ce minichat de base utilise socket.io pour permettre une communication instantanée entre les utilisateurs.
   symfony:
     title: Réseau social en Symfony
-    date: Mai 2017 - Nov 2018
+    date: Jan 2018 - Nov 2018
     tags: Symfony / PHP / Web Application
     details_1: Réseau social permettant à chacun de publier des articles et/ou des messages.
     details_2: Projet créé en utilisant le langage PHP et le framework Symfony (Symfony 3 puis migré vers Symfony 4)

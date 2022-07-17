@@ -74,7 +74,7 @@ data:
     backend_tools: Backend Tools & Tech
     details_1: Corunner is a Workout Network Platform. A place to schedule, share and plan your physical exercises and allow people from your town to join you.
     details_2: "Corunner is packed with exciting features, including the ability to:"
-    date: Mai 20, 2022
+    date: August 2021 - Mai 2022
     tags: Fullstack / React / Express / GraphQL
     list:
       1: Create customized workout routes. Different display modes exists for the workout
@@ -87,20 +87,20 @@ data:
   react:
     title: React Authentication Frontend
     name: React Frontend
-    date: Aug 16, 2021
+    date: Jully, 2021
     tags: React / Frontend / MERN
     details_1: Member space allowing users to authenticate, view their stored information and log out.
     details_2: This is the frontend of the MERN (MongoDB - Express - React - NodeJS) Projet.
   node:
     title: Node Authentication Backend
-    date: Aug 16, 2021
+    date: Jully, 2021
     name: Node Backend
     tags: NodeJS / Express / Passport / MongoDB
     details_1: API for the Member Space Authentication project.
     details_2: This is the backend of the MERN (MongoDB - Express - React - NodeJS) Project.
   memory:
     title: React Memory Game
-    date: April, 2021
+    date: Jully, 2020
     name: React Memory Game
     tags: React / Game
     details_1: Simple React memory game project
@@ -113,7 +113,7 @@ data:
     details_2: This basic minichat uses socket.io to allow instant communication between users
   symfony:
     title: Symfony Social Network
-    date: May 2017 - Nov 2018
+    date: Jan 2018 - Nov 2018
     tags: Symfony / PHP / Web Application
     details_1: Social network allowing everyone to publish articles and/or posts.
     details_2: Project created using the PHP language and the Symfony framework (Symfony 3 then migrated to Symfony 4)
