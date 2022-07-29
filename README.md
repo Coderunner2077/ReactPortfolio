@@ -69,6 +69,9 @@ If you are going to install the backend api, you will need the following envorme
 
 VITE_API_ENDPOINT -> Working URL of the backend api
 VITE_MODE -> Production enviroment variables (development/production)
+VITE_ADDRESS -> Your contact address
+VITE_EMAIL -> Your contact email
+VITE_PHONE -> Your contact phone number
 ```
 
 5. ##### Open the project folder:

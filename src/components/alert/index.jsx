@@ -4,7 +4,6 @@ import { deleteAlerts } from "../../store/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { AlertMessage } from "../UI";
 import { motion } from "framer-motion";
-import { BiRestaurant } from "react-icons/bi";
 
 const Alert = () => {
 	const alerts = useSelector((state) => state.flash.alerts);

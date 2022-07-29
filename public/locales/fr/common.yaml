@@ -5,7 +5,7 @@ navbar:
   hire: "Engagez moi"
 home:
   hi: Bonjour, je suis Guillaume
-  position: Fullstack Développeur React / Node.js & Codeur à vie !
+  position: Fullstack Développeur React / NodeJS & Codeur à vie !
 main:
   follow: Suivez moi
   contact:
@@ -34,7 +34,7 @@ form:
     static: Site Statique
     e_commerce: Boutique e-commerce
     frontend: Frontend React
-    backend: Backend Node.js
+    backend: Backend NodeJS
     ui: UX/UI Design
     graphql: API GraphQL
     rest: API REST
@@ -57,9 +57,9 @@ projects:
     c: Projet C
 about:
   project: A propos du Projet
-  bio1: Bonjour, je suis Guillaume Coderunner, un développeur full-stack & Coder for life ! J'adore travailler avec les technologies web et explorer l'écosystème JavaScript.
+  bio1: Bonjour, je suis Guillaume Coderunner, un développeur full-stack React / NodeJS. J'adore travailler avec les technologies web et explorer l'écosystème JavaScript.
   bio2: Je suis passionné par la programmation, la mise en œuvre de nouvelles technologies dans mes projets d'une manière créative. Mon objectif est de viser la perfection en utilisant les meilleures pratiques au mieux de mes capacités.
-  bio3: J'aime à la fois les côtés frontend et backend du développement. Étant un programmeur autodidacte, j'ai parcouru un long chemin en apprenant différents langages, notamment le C, le JAVA, le PHP et enfin l'écosystème React. Actuellement, je réalise des projets React et Node.js pour des clients, et pendant mon temps libre, j'apprends le framework Flutter.
+  bio3: J'aime à la fois les côtés frontend et backend du développement. Étant un programmeur autodidacte, j'ai parcouru un long chemin en apprenant différents langages, notamment le C, le JAVA, le PHP et enfin l'écosystème React/NodeJS dans lequel je me baigne ces quelques années. Actuellement, je réalise des projets React et NodeJS pour mes clients.
 data:
   name: Nom
   category: Catégorie
@@ -74,7 +74,7 @@ data:
     backend_tools: Outils & Technologies Backend
     details_1: Corunner est une plateforme de réseau d'entraînement. Un endroit pour programmer, partager et planifier vos exercices physiques et permettre aux personnes de votre ville de vous rejoindre.
     details_2: "Corunner regorge de fonctionnalités intéressantes, notamment la possibilité de :"
-    date: 20 mai 2022
+    date: Août 2021 - Mai 2022
     tags: Fullstack / React / Express / GraphQL
     list:
       1: Créer des itinéraires d'entraînement personnalisés. Différents modes d'affichage existent pour l'entraînement
@@ -87,20 +87,20 @@ data:
   react:
     title: Authentification Frontend / React
     name: Frontend React
-    date: 16 août 2021
+    date: Juillet 2021
     tags: React / Frontend / MERN
     details_1: Espace membre permettant aux utilisateurs de s'authentifier, de voir leur information stockée et de se déconnecter.
     details_2: Il s'agit du frontend du projet MERN (MongoDB - Express - React - NodeJS).
   node:
     title: Authentification Backend / Node
-    date: 16 août 2021
+    date: Juillet 2021
     name: Node Backend
     tags: NodeJS / Express / Passport / MongoDB
     details_1: API pour le projet Espace Membre Authentification.
     details_2: Il s'agit du backend du projet MERN (MongoDB - Express - React - NodeJS).
   memory:
     title: Jeu de mémoire React
-    date: Avril 2021
+    date: Juillet 2020
     name: Jeu de mémoire - React
     tags: React / Jeu
     details_1: Projet simple de jeu de mémoire en React
@@ -113,7 +113,7 @@ data:
     details_2: Ce minichat de base utilise socket.io pour permettre une communication instantanée entre les utilisateurs.
   symfony:
     title: Réseau social en Symfony
-    date: Mai 2017 - Nov 2018
+    date: Jan 2018 - Nov 2018
     tags: Symfony / PHP / Web Application
     details_1: Réseau social permettant à chacun de publier des articles et/ou des messages.
     details_2: Projet créé en utilisant le langage PHP et le framework Symfony (Symfony 3 puis migré vers Symfony 4)

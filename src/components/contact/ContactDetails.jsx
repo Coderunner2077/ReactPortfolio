@@ -5,17 +5,17 @@ import { useTranslation } from "react-i18next";
 const contacts = [
 	{
 		id: 1,
-		name: '76, Avenue des Alliés, 06500 Menton, France',
+		name: "VITE_ADDRESS",
 		icon: <FiMapPin />,
 	},
 	{
 		id: 2,
-		name: 'coderunner2077@gmail.com',
+		name: "VITE_EMAIL",
 		icon: <FiMail />,
 	},
 	{
 		id: 3,
-		name: '+33 (0)7 60 11 71 71',
+		name: "VITE_PHONE",
 		icon: <FiPhone />,
 	},
 ];
@@ -35,7 +35,7 @@ const ContactDetails = () => {
 								{contact.icon}
 							</i>
 							<span className="text-lg mb-4 text-ternary-dark dark:text-ternary-light">
-								{contact.name}
+								{`${import.meta.env[contact.name]}`}
 							</span>
 						</li>
 					))}
