@@ -5,12 +5,12 @@ const SingleProjectContext = createContext();
 
 export const SingleProjectProvider = ({ id, children }) => {
 	const [singleProjectData, setSingleProjectData] = useState(
-		isNaN(id) || id < 1 || id > 11 ? undefined : singleProjectDataJson[id - 1]
+		isNaN(id) || id < 1 || id > 12 ? undefined : singleProjectDataJson[id - 1]
 	);
 
 	const selectProjectData = (id) => {
 		setSingleProjectData(
-			isNaN(id) || id < 1 || id > 11 ? undefined : singleProjectDataJson[id - 1]
+			isNaN(id) || id < 1 || id > 12 ? undefined : singleProjectDataJson[id - 1]
 		);
 	}
 

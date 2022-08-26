@@ -1,5 +1,8 @@
 import React from "react";
 // Import images
+import Instashop1 from "../images/instashop-project-1.jpg";
+import Instashop2 from "../images/instashop-project-2.jpg";
+import Instashop3 from "../images/instashop-project-3.jpg";
 import Corunner1 from "../images/corunner-project-1.jpg";
 import Corunner2 from "../images/corunner-project-2.jpg";
 import Corunner3 from "../images/corunner-project-3.jpg";
@@ -15,23 +18,121 @@ import CProject from "../images/c-project.jpg";
 export const singleProjectData = [
 	{
 		ProjectHeader: {
+			title: 'data.instashop.title',
+			publishDate: 'data.instashop.date',
+			tags: 'data.instashop.tags',
+		},
+		ProjectImages: [
+			{
+				id: 1,
+				title: 'data.instashop.title',
+				img: Instashop1,
+			},
+			{
+				id: 2,
+				title: 'data.instashop.title',
+				img: Instashop2,
+			},
+			{
+				id: 3,
+				title: 'data.instashop.title',
+				img: Instashop3,
+			},
+
+		],
+		ProjectInfo: {
+			ClientHeading: 'about.project',
+			CompanyInfo: [
+				{
+					id: 1,
+					title: 'data.name',
+					details: 'data.instashop.name',
+				},
+				{
+					id: 2,
+					title: 'data.category',
+					details: 'projects.category.ecommerce',
+				},
+				{
+					id: 3,
+					title: 'data.website',
+					details: 'https://instashop-seven.vercel.app',
+				},
+				{
+					id: 4,
+					title: 'data.source',
+					details: 'https://github.com/Coderunner2077/Instashop'
+				}
+			],
+			Technologies: [
+				{
+					title: 'data.tools',
+					techs: [
+						"NextJS",
+						'React',
+						'Redux',
+						'Sanity',
+						'Stripe',
+						'TailwindCSS',
+						'JavaScript',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'projects.heading',
+			ProjectDetails: [
+				{
+					id: 1,
+					details: 'data.instashop.details_1',
+				},
+				{
+					id: 2,
+					details: 'data.instashop.details_2'
+				},
+			],
+		},
+		RelatedProject: {
+			title: 'projects.related',
+			Projects: [
+				{
+					id: 2,
+					title: 'data.corunner.title',
+					category: 'projects.category.web',
+					img: Corunner2,
+				},
+				{
+					id: 3,
+					title: 'data.react.title',
+					category: 'projects.category.mern',
+					img: ReactNodePassport,
+				},
+				{
+					id: 4,
+					title: 'data.memory.title',
+					category: 'projects.category.react',
+					img: ReactMemory,
+				},
+			],
+		},
+	},
+	{
+		ProjectHeader: {
 			title: 'data.corunner.title',
 			publishDate: 'data.corunner.date',
 			tags: 'data.corunner.tags',
 		},
 		ProjectImages: [
 			{
-				id: 1,
+				id: 2,
 				title: 'data.corunner.title',
 				img: Corunner2,
 			},
 			{
-				id: 2,
+				id: 3,
 				title: 'data.corunner.title',
 				img: Corunner1,
 			},
 			{
-				id: 3,
+				id: 4,
 				title: 'data.corunner.title',
 				img: Corunner3,
 			},
@@ -111,25 +212,25 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 2,
+					id: 3,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 3,
+					id: 4,
 					title: 'data.node.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 4,
+					id: 5,
 					title: 'data.memory.title',
 					category: 'projects.category.react',
 					img: ReactMemory,
 				},
 				{
-					id: 5,
+					id: 6,
 					title: 'data.minichat.title',
 					category: 'projects.category.express',
 					img: NodeSocketIO,
@@ -196,19 +297,19 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 3,
+					id: 4,
 					title: 'data.node.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 1,
+					id: 2,
 					title: 'data.corunner.title',
 					category: 'projects.category.web',
 					img: Corunner2,
 				},
 				{
-					id: 4,
+					id: 5,
 					title: 'data.memory.title',
 					category: 'projects.category.react',
 					img: ReactMemory,
@@ -276,19 +377,19 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 2,
+					id: 3,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 1,
+					id: 2,
 					title: 'data.corunner.title',
 					category: 'projects.category.web',
 					img: Corunner2,
 				},
 				{
-					id: 5,
+					id: 6,
 					title: 'data.minichat.title',
 					category: 'projects.category.express',
 					img: NodeSocketIO,
@@ -360,13 +461,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 2,
+					id: 3,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 8,
+					id: 9,
 					title: 'data.pendu.title',
 					category: 'projects.category.java',
 					img: JavaProject,
@@ -434,7 +535,7 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 3,
+					id: 4,
 					title: 'data.node.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
@@ -506,13 +607,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 7,
+					id: 8,
 					title: 'data.php.title',
 					category: 'projects.category.php',
 					img: PhpProject,
 				},
 				{
-					id: 1,
+					id: 2,
 					title: 'data.corunner.title',
 					category: 'projects.category.web',
 					img: Corunner2,
@@ -579,13 +680,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 6,
+					id: 7,
 					title: 'data.symfony.title',
 					category: 'projects.category.symfony',
 					img: SymfonyPHP,
 				},
 				{
-					id: 2,
+					id: 3,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
@@ -650,13 +751,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 9,
+					id: 10,
 					title: 'data.garage.title',
 					category: 'projects.category.java',
 					img: JavaProject,
 				},
 				{
-					id: 4,
+					id: 5,
 					title: 'data.memory.title',
 					category: 'projects.category.react',
 					img: ReactMemory,
@@ -721,7 +822,7 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 8,
+					id: 9,
 					title: 'data.pendu.title',
 					category: 'projects.category.java',
 					img: JavaProject,
@@ -786,7 +887,7 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 8,
+					id: 9,
 					title: 'data.pendu.title',
 					category: 'projects.category.java',
 					img: JavaProject,
