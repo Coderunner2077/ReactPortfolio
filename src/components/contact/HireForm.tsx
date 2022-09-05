@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { addAlert } from "../../store/actions";
 import { useDispatch } from "react-redux";
 import { formatError } from "../../utils";
-import LoadingButton from "../reusable/LoadingButton";
+import { LoadingButton } from "../UI";
 
 const selectOptions = [
     'form.project.app',
@@ -27,7 +27,7 @@ const HireForm = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
 
-    const timerRef = useRef();
+    const timerRef = useRef<number>(null);
 
     const resetButton = () => {
         clearTimeout(timerRef.current);
@@ -104,8 +104,7 @@ const HireForm = () => {
                             className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
                             id="subject"
                             name="subject"
-                            type="text"
-                            required=""
+                            required={true}
                             aria-label="Project Category"
                             onChange={e => setSubject(e.target.value)}
                         >
@@ -132,8 +131,8 @@ const HireForm = () => {
                             className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
                             id="message"
                             name="message"
-                            cols="14"
-                            rows="5"
+                            cols={14}
+                            rows={5}
                             aria-label="Message"
                             value={message}
                             onChange={e => setMessage(e.target.value)}

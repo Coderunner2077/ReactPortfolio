@@ -9,7 +9,7 @@ const About = () => {
 	return (
 		<AboutMeProvider>
 			<motion.div
-				initial={{ opacity: 0 }}
+				initial={{ opacity: 0 }} //@ts-ignore
 				animate={{ opacity: 1, delay: 1 }}
 				exit={{ opacity: 0 }}
 				className="container mx-auto"

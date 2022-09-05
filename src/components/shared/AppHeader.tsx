@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import logoG from "../../images/logo-g.png";
 import { motion } from 'framer-motion';
-import Button from '../reusable/Button';
+import { Button } from '../UI';
 import { useTranslation } from 'react-i18next';
 import { showModal } from "../../store/actions";
 import { useDispatch } from "react-redux";

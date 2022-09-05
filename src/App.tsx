@@ -18,7 +18,7 @@ import Alert from "./components/alert";
 import "./i18n";
 
 function App() {
-	return (
+	return (//@ts-ignore
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Modal />

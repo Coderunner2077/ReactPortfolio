@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ProjectGallery from '../components/projects/ProjectGallery';
-import ProjectHeader from '../components/projects//ProjectHeader';
+import ProjectHeader from '../components/projects/ProjectHeader';
 import ProjectInfo from '../components/projects/ProjectInfo';
 import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects';
 import { SingleProjectProvider } from '../context/SingleProjectContext';
@@ -11,7 +11,7 @@ const ProjectSingle = () => {
 	const { id } = useParams();
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
+			initial={{ opacity: 0 }} //@ts-ignore
 			animate={{ opacity: 1, delay: 1 }}
 			transition={{
 				ease: 'easeInOut',

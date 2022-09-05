@@ -13,7 +13,7 @@ i18n
     // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
     .use(Backend)
-    .init({
+    .init({ //@ts-ignore
         whitelist: ["fr", "en"],
         nonExplicitWhitelist: true,
         load: "languageOnly",

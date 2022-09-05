@@ -4,7 +4,7 @@ import http from "../../utils/http";
 import { formatError } from "../../utils";
 import { useDispatch } from "react-redux";
 import { addAlert } from "../../store/actions";
-import LoadingButton from "../reusable/LoadingButton";
+import { LoadingButton } from "../UI";
 
 const ContactForm = () => {
 	const [name, setName] = useState("");
@@ -14,7 +14,7 @@ const ContactForm = () => {
 	const [loading, setLoading] = useState(false);
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	const timerRef = useRef();
+	const timerRef = useRef<number>();
 
 	const resetButton = () => {
 		clearTimeout(timerRef.current);
@@ -118,8 +118,8 @@ const ContactForm = () => {
 							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
 							id="message"
 							name="message"
-							cols="14"
-							rows="6"
+							cols={14}
+							rows={6}
 							aria-label="Message"
 							value={message}
 							onChange={e => setMessage(e.target.value)}
