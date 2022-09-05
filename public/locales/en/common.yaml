@@ -69,12 +69,12 @@ data:
   tools: Tools & Technologies
   instashop:
     title: Instashop
-    name: NextJS Ecommerce App
+    name: Next.js Ecommerce App
     website: https://instashop-seven.vercel.app
-    details_1: This is an online ecommerce store. Easy build with NextJS & Sanity, easy deployment with Vercel.
-    details_2: Usually I love to build everything from scratch, but this time I allowed myself to try out a high level framework along with Sanity for data management and Stripe for payments... and once I got the hand of NextJS, it was very intuitive and perhaps too easy.
+    details_1: This is an online ecommerce store. Easy build with Next.js & Sanity, easy deployment with Vercel.
+    details_2: Usually I love to build everything from scratch, but this time I allowed myself to try out a high level framework along with Sanity for data management and Stripe for payments... and once I got the hand of Next.js, it seemed very intuitive and surprisingly straightforward.
     date: August 15th 2022 - August 25th, 2022
-    tags: NextJS / React / Sanity / Stripe
+    tags: Next.js / Sanity / Stripe
   corunner:
     title: Corunner Workout Platform
     name: Corunner Fullstack App
