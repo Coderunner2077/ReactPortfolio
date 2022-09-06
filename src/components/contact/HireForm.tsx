@@ -27,17 +27,17 @@ const HireForm = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
 
-    const timerRef = useRef<number>(null);
+    const timerRef: { current: number | null } = useRef(null);
 
     const resetButton = () => {
-        clearTimeout(timerRef.current);
+        clearTimeout(timerRef.current as number);
         timerRef.current = setTimeout(() => {
             setLoading(false);
         }, 2000);
     }
 
     useEffect(() => {
-        return () => clearTimeout(timerRef.current);
+        return () => clearTimeout(timerRef.current as number);
     });
 
     const handleReset = () => {

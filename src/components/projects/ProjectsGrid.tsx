@@ -86,7 +86,7 @@ const ProjectsGrid = ({ count = 6 }) => {
 							id="name"
 							name="name"
 							type="search"
-							required=""
+							required={true}
 							placeholder={t("projects.search")}
 							aria-label="Name"
 						/>

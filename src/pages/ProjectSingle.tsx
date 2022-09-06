@@ -20,7 +20,7 @@ const ProjectSingle = () => {
 			}}
 			className="container mx-auto mt-5 sm:mt-10"
 		>
-			<SingleProjectProvider id={parseInt(id, 10)}>
+			<SingleProjectProvider id={parseInt(id ?? "", 10)}>
 				<ProjectHeader />
 				<ProjectGallery />
 				<ProjectInfo />

@@ -6,8 +6,8 @@ const LoadingButton: React.FC<{
     loading: boolean, onClick?: Function, type?: "submit" | "button" | "reset", top?: string
 }>
     = ({ children, className = "btn btn-purple flex-x", size = 14, width, loading, onClick, type = "submit", top = "18px" }) => {
-        const buttonRef = useRef(null);
-        const spinnerDivRef = useRef(null);
+        const buttonRef: { current: HTMLButtonElement | null } = useRef(null);
+        const spinnerDivRef: { current: HTMLDivElement | null } = useRef(null);
 
         useLayoutEffect(() => {
             const button = buttonRef.current; if (!button) return;
@@ -17,8 +17,8 @@ const LoadingButton: React.FC<{
 
             button.style.width = `${buttonWidth}px`;
             if (!spinnerDiv) return;
-            try {
-                const siblingOffsetLeft = button.firstElementChild.classList.contains("absolute") ? button.firstElementChild.nextSibling.offsetLeft : button.firstElementChild.offsetLeft;
+            try {//@ts-ignore
+                const siblingOffsetLeft = button.firstElementChild?.classList.contains("absolute") ? button.firstElementChild?.nextSibling?.offsetLeft : button.firstElementChild?.offsetLeft;
                 if (!siblingOffsetLeft) throw new Error("Failed to get button's text position");
                 spinnerDiv.style.left = siblingOffsetLeft - 16 + "px";
                 spinnerDiv.style.top = top;

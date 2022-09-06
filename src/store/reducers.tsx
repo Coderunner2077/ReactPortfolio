@@ -1,8 +1,14 @@
 import { createSlice, combineReducers } from "@reduxjs/toolkit";
+import { IModalProperties, IModalTitle, IAlertMessage } from "../types";
 
-const initialState = {
-	modal: null
+// Modal
+type ModalState = {
+	modal: IModalProperties | null | undefined
 };
+
+const initialState: ModalState = {
+	modal: null
+}
 
 export const modalSlice = createSlice({
 	name: "modal",
@@ -21,7 +27,12 @@ export const modalSlice = createSlice({
 	}
 });
 
-const initialAlertState = {
+// Alert
+type AlertState = {
+	alerts: IAlertMessage[] | [] | undefined
+}
+
+const initialAlertState: AlertState = {
 	alerts: []
 }
 
@@ -48,4 +59,5 @@ const rootReducer = combineReducers({
 	flash: alertSlice.reducer
 });
 
+export type RootState = ReturnType<typeof rootReducer>;
 export default rootReducer;

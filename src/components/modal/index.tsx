@@ -3,12 +3,13 @@ import ReactDOM from "react-dom";
 import { IconButton } from "../UI";
 import { ImCross } from "react-icons/im";
 import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../store/reducers";
 import { hideModal } from "../../store/actions";
 import { motion } from "framer-motion";
 
 const Modal = () => {
     const dispatch = useDispatch();
-    const { modal } = useSelector((state) => state.modal);
+    const { modal } = useSelector((state: RootState) => state.modal);
 
     if (!modal) return null;
 

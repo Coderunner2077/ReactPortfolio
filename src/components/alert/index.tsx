@@ -2,12 +2,14 @@ import React, { useEffect, useRef, useState, useMemo } from "react";
 import ReactDOM from "react-dom";
 import { deleteAlerts } from "../../store/actions";
 import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../store/reducers";
 import { AlertMessage } from "../UI";
+import { IAlertMessage } from "../../types";
 import { motion } from "framer-motion";
 
 const Alert = () => {
-	const alerts = useSelector((state) => state.flash.alerts);
-	const timeoutRef = useRef(null);
+	const alerts = useSelector((state: RootState) => state.flash.alerts);
+	const timeoutRef: { current: number | null } = useRef(null);
 	const dispatch = useDispatch();
 	const [activeAlerts, setActiveAlerts] = useState(alerts);
 	const [animation, setAnimation] = useState("");
@@ -15,7 +17,7 @@ const Alert = () => {
 	useEffect(() => {
 		setActiveAlerts(alerts);
 		setAnimation("animate-alert-in");
-		clearTimeout(timeoutRef.current);
+		clearTimeout(timeoutRef.current as number);
 		if (alerts?.length) {
 			timeoutRef.current = setTimeout(() => {
 				dispatch(deleteAlerts());
@@ -23,7 +25,7 @@ const Alert = () => {
 		}
 
 		return () => {
-			clearTimeout(timeoutRef.current);
+			clearTimeout(timeoutRef.current as number);
 		};
 	}, [alerts]);
 
@@ -35,7 +37,7 @@ const Alert = () => {
 	const resetTimeout = (e) => {
 		e.stopPropagation();
 		setAnimation("animate-none");
-		clearTimeout(timeoutRef.current);
+		clearTimeout(timeoutRef.current as number);
 		timeoutRef.current = setTimeout(() => {
 			setAnimation("animate-alert-out");
 			timeoutRef.current = setTimeout(() => {
@@ -44,10 +46,10 @@ const Alert = () => {
 		}, 300);
 	};
 
-	function uniqByKeepLast(a, key) {
+	function uniqByKeepLast(a: IAlertMessage[], key: (a: IAlertMessage) => string): IAlertMessage[] {
 		return [
 			...new Map(
-				a.map(x => [key(x), x])
+				a.map((x: any) => [key(x), x])
 			).values()
 		]
 	}
