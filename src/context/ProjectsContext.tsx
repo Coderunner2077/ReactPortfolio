@@ -2,7 +2,15 @@ import React, { useState, createContext } from 'react';
 import { projectsData } from '../data/projects';
 
 // Create projects context
-export const ProjectsContext = createContext();
+export const ProjectsContext = createContext<{
+	projects: any[], setProjects: React.Dispatch<any[]>, searchProject: string, setSearchProject: React.Dispatch<string>,
+	searchProjectsByTitle: any[], selectProject: string, setSelectProject: React.Dispatch<string>,
+	selectProjectsByCategory: any[]
+}>({
+	projects: [], setProjects: (projects: any[]) => { }, searchProject: "", setSearchProject: (sP: string) => { },
+	searchProjectsByTitle: [], selectProject: "", setSelectProject: (sP: string) => { },
+	selectProjectsByCategory: []
+});
 
 // Create the projects context provider
 export const ProjectsProvider = (props) => {
