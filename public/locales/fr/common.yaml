@@ -56,6 +56,7 @@ projects:
     php: Projet PHP
     java: Projet Java
     c: Projet C
+    npm: Module NPM
 about:
   project: A propos du Projet
   bio1: Bonjour, je suis Guillaume Coderunner, un développeur full-stack React / NodeJS. J'adore travailler avec les technologies web et explorer l'écosystème JavaScript.
@@ -67,6 +68,16 @@ data:
   website: Site Web
   source: Code Source
   tools: Outils & Technologies
+  npm:
+    title: GraphQL Secure Data
+    name: Module de Sécurité GraphQL
+    website: https://www.npmjs.com/package/graphql-secure-data
+    details_1: GraphQL Secure Data protège votre application contre la récupération excessive et/ou abusive de données. Grâce à une couche de restrictions intuitive, vous pourrez protéger vos données contre les requêtes imprévues en spécifiant le nombre maximal de champs imbriqués autorisés pour vos types de données. Ces restrictions sont appliquées à toutes les requêtes, mutations et souscriptions qui renvoient les types de données spécifiés.
+    details_2: Limiter les requêtes GraphQL comme solution pour augmenter la sécurité et la performance de votre API GraphQL n'en vaut la peine que si la stratégie inclut la facilité d'utilisation et le maintien d'un équilibre délicat entre flexibilité et sécurité. Et cette idée simple m'a inspiré la création du module graphql-secure-data qui est un middleware facile à utiliser permettant à votre serveur GraphQL de filtrer les requêtes en fonction de la forme des données demandées tout en maintenant un niveau raisonnable et sûr de flexibilité de GraphQL.
+    details_3: "J'ai écrit un article sur ce module. Vous pouvez le trouver en suivant le lien ci-dessous :"
+    date: Septembre 2022
+    tags: Module NPM / GraphQL / NodeJS
+    link_title: Comment limiter les requêtes GraphQL pour améliorer la sécurité et les performances
   instashop:
     title: Instashop
     name: Next.js E-commerce App

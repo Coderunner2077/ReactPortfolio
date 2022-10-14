@@ -81,6 +81,7 @@ const ProjectInfo = () => {
 					{t(singleProjectData.ProjectInfo.ProjectDetailsHeading)}
 				</p>
 				{singleProjectData.ProjectInfo.ProjectDetails.map((details, index) => {
+					console.log("details: ", details);
 					return (
 						<div key={`about-section-paragraph-${details.id}-${index}`}>
 							<p
@@ -94,6 +95,13 @@ const ProjectInfo = () => {
 										<li className="text-white" key={`list-item-${index}`}>{t(item)}</li>
 									))}
 								</ul>
+							)}
+							{details.link && (
+								<p className="font-general-regular text-ternary-dark dark:text-ternary-light">
+									<a href={details.link.url} target="_blank" className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300">
+										{t(details.link.title)}
+									</a>
+								</p>
 							)}
 						</div>
 					);

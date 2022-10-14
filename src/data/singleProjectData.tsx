@@ -1,5 +1,3 @@
-import React from "react";
-// Import images
 import Instashop1 from "../images/instashop-project-1.jpg";
 import Instashop2 from "../images/instashop-project-2.jpg";
 import Instashop3 from "../images/instashop-project-3.jpg";
@@ -14,8 +12,109 @@ import SymfonyPHP from "../images/symfony-php.png";
 import PhpProject from "../images/php-project.png";
 import JavaProject from "../images/java-project.jpg";
 import CProject from "../images/c-project.jpg";
+import GraphQLSecure from "../images/graphqlsecure-project-1.jpg"
+import GraphQLSecure2 from "../images/graphqlsecure-project-2.png"
+import GraphQLSecure3 from "../images/graphqlsecure-project-3.png"
+
+
 
 export const singleProjectData = [
+	{
+		ProjectHeader: {
+			title: 'data.npm.title',
+			publishDate: 'data.npm.date',
+			tags: 'data.npm.tags',
+		},
+		ProjectImages: [
+			{
+				id: 1,
+				title: 'data.npm.title',
+				img: GraphQLSecure,
+			},
+			{
+				id: 2,
+				title: 'data.npm.title',
+				img: GraphQLSecure2,
+			},
+			{
+				id: 3,
+				title: 'data.npm.title',
+				img: GraphQLSecure3,
+			},
+
+		],
+		ProjectInfo: {
+			ClientHeading: 'about.project',
+			CompanyInfo: [
+				{
+					id: 1,
+					title: 'data.name',
+					details: 'data.npm.name',
+				},
+				{
+					id: 2,
+					title: 'data.category',
+					details: 'projects.category.npm',
+				},
+				{
+					id: 3,
+					title: 'data.website',
+					details: 'https://www.npmjs.com/package/graphql-secure-data',
+				},
+				{
+					id: 4,
+					title: 'data.source',
+					details: 'https://github.com/Coderunner2077/GraphQL-Secure-Data'
+				}
+			],
+			Technologies: [
+				{
+					title: 'data.tools',
+					techs: [
+						'NPM',
+						'GraphQL',
+						'NodeJS'
+					],
+				},
+			],
+			ProjectDetailsHeading: 'projects.heading',
+			ProjectDetails: [
+				{
+					id: 1,
+					details: 'data.npm.details_1',
+				},
+				{
+					id: 2,
+					details: 'data.npm.details_2'
+				},
+				{
+					id: 3,
+					details: 'data.npm.details_3',
+					link: {
+						url: "https://dev.to/coderunner2077/how-to-limit-graphql-queries-for-better-security-and-performance-5ch4",
+						title: "data.npm.link_title"
+					}
+				},
+			],
+		},
+		RelatedProject: {
+			title: 'projects.related',
+			Projects: [
+				{
+					id: 7,
+					title: 'data.minichat.title',
+					category: 'projects.category.express',
+					img: NodeSocketIO,
+				},
+				{
+					id: 5,
+					title: 'data.node.title',
+					category: 'projects.category.mern',
+					img: ReactNodePassport,
+				},
+			],
+		},
+	},
 	{
 		ProjectHeader: {
 			title: 'data.instashop.title',
@@ -94,19 +193,19 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 2,
+					id: 3,
 					title: 'data.corunner.title',
 					category: 'projects.category.web',
 					img: Corunner2,
 				},
 				{
-					id: 3,
+					id: 4,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 4,
+					id: 5,
 					title: 'data.memory.title',
 					category: 'projects.category.react',
 					img: ReactMemory,
@@ -174,7 +273,7 @@ export const singleProjectData = [
 				{
 					title: 'data.corunner.frontend_tools',
 					techs: [
-						'Node.js',
+						'NodeJS',
 						'Express',
 						'Express-GraphQL',
 						'Graphql-WS',
@@ -212,25 +311,25 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 3,
+					id: 4,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 4,
+					id: 5,
 					title: 'data.node.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 5,
+					id: 6,
 					title: 'data.memory.title',
 					category: 'projects.category.react',
 					img: ReactMemory,
 				},
 				{
-					id: 6,
+					id: 7,
 					title: 'data.minichat.title',
 					category: 'projects.category.express',
 					img: NodeSocketIO,
@@ -297,19 +396,19 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 4,
+					id: 5,
 					title: 'data.node.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 2,
+					id: 3,
 					title: 'data.corunner.title',
 					category: 'projects.category.web',
 					img: Corunner2,
 				},
 				{
-					id: 5,
+					id: 6,
 					title: 'data.memory.title',
 					category: 'projects.category.react',
 					img: ReactMemory,
@@ -377,19 +476,19 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 3,
+					id: 4,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 2,
+					id: 3,
 					title: 'data.corunner.title',
 					category: 'projects.category.web',
 					img: Corunner2,
 				},
 				{
-					id: 6,
+					id: 7,
 					title: 'data.minichat.title',
 					category: 'projects.category.express',
 					img: NodeSocketIO,
@@ -461,13 +560,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 3,
+					id: 4,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
 				},
 				{
-					id: 9,
+					id: 10,
 					title: 'data.pendu.title',
 					category: 'projects.category.java',
 					img: JavaProject,
@@ -535,7 +634,7 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 4,
+					id: 5,
 					title: 'data.node.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
@@ -607,13 +706,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 8,
+					id: 9,
 					title: 'data.php.title',
 					category: 'projects.category.php',
 					img: PhpProject,
 				},
 				{
-					id: 2,
+					id: 3,
 					title: 'data.corunner.title',
 					category: 'projects.category.web',
 					img: Corunner2,
@@ -680,13 +779,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 7,
+					id: 8,
 					title: 'data.symfony.title',
 					category: 'projects.category.symfony',
 					img: SymfonyPHP,
 				},
 				{
-					id: 3,
+					id: 4,
 					title: 'data.react.title',
 					category: 'projects.category.mern',
 					img: ReactNodePassport,
@@ -751,13 +850,13 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 10,
+					id: 11,
 					title: 'data.garage.title',
 					category: 'projects.category.java',
 					img: JavaProject,
 				},
 				{
-					id: 5,
+					id: 6,
 					title: 'data.memory.title',
 					category: 'projects.category.react',
 					img: ReactMemory,
@@ -822,7 +921,7 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 9,
+					id: 10,
 					title: 'data.pendu.title',
 					category: 'projects.category.java',
 					img: JavaProject,
@@ -887,7 +986,7 @@ export const singleProjectData = [
 			title: 'projects.related',
 			Projects: [
 				{
-					id: 9,
+					id: 10,
 					title: 'data.pendu.title',
 					category: 'projects.category.java',
 					img: JavaProject,

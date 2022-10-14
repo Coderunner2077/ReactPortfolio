@@ -5,6 +5,7 @@ const selectOptions = [
 	'projects.category.web',
 	'projects.category.mern',
 	'projects.category.react',
+	'projects.category.npm',
 	'projects.category.express',
 	'projects.category.symfony',
 	'projects.category.php',
