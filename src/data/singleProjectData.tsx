@@ -71,9 +71,9 @@ export const singleProjectData = [
 				{
 					title: 'data.tools',
 					techs: [
-						'NPM',
-						'GraphQL',
-						'NodeJS'
+						'TypeScript',
+						'NodeJS',
+						'GraphQL'
 					],
 				},
 			],
