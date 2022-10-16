@@ -1,5 +1,6 @@
 import React from "react";
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { FiMapPin, FiMail } from 'react-icons/fi';
+import { BsWhatsapp } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 
 const contacts = [
@@ -16,7 +17,7 @@ const contacts = [
 	{
 		id: 3,
 		name: "VITE_PHONE",
-		icon: <FiPhone />,
+		icon: <BsWhatsapp />,
 	},
 ];
 
