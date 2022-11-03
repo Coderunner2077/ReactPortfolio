@@ -92,7 +92,7 @@ const ProjectInfo = () => {
 							{details.listItems && (
 								<ul className="list-disc">
 									{details.listItems.map((item, index) => (
-										<li className="text-white" key={`list-item-${index}`}>{t(item)}</li>
+										<li className="text-ternary-dark dark:text-ternary-light" key={`list-item-${index}`}>{t(item)}</li>
 									))}
 								</ul>
 							)}
