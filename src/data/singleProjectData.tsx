@@ -248,7 +248,7 @@ export const singleProjectData = [
 				{
 					id: 2,
 					title: 'data.category',
-					details: 'category.web',
+					details: 'projects.category.web',
 				},
 				{
 					id: 3,

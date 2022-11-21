@@ -48,7 +48,7 @@ projects:
   category:
     all: Tous les Projets
     ecommerce: Boutique e-commerce
-    web: Web Application
+    web: Application Web
     mern: Projet MERN
     react: Projet React
     express: Projet Express
