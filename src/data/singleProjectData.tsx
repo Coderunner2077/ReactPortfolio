@@ -188,7 +188,43 @@ export const singleProjectData = [
 					id: 2,
 					details: 'data.instashop.details_2'
 				},
+				{
+					id: 3,
+					details: 'data.instashop.details_3',
+				},
+				{
+					id: 4,
+					details: 'data.instashop.details_4'
+				},
+				{
+					id: 5,
+					details: 'data.instashop.details_5',
+				},
+				{
+					id: 6,
+					details: 'data.instashop.details_6'
+				},
+				{
+					id: 7,
+					details: 'data.instashop.details_7',
+					listItems: [
+						"data.instashop.list.1",
+						"data.instashop.list.2",
+						"data.instashop.list.3",
+						"data.instashop.list.4",
+						"data.instashop.list.5"
+					]
+				},
 			],
+			ExternalLinks: [
+				{
+					id: 1,
+					link: {
+						url: "https://www.youtube.com/watch?v=4mOkFXyxfsU",
+						title: "data.instashop.link.1"
+					}
+				}
+			]
 		},
 		RelatedProject: {
 			title: 'projects.related',

@@ -70,6 +70,7 @@ data:
   tools: Outils & Technologies
   created: Créé
   updated: Mis à jour
+  links: Liens externes
   npm:
     title: GraphQL Secure Data
     name: Module de Sécurité GraphQL
@@ -84,11 +85,24 @@ data:
     title: Instashop
     name: Next.js E-commerce App
     website: https://instashop-seven.vercel.app
-    details_1: Il s'agit d'une boutique de commerce en ligne. Développement facile avec Next.js & Sanity, déploiement facile avec Vercel.
-    details_2: D'habitude, j'aime bricoler, mais cette fois-ci, je me suis permis d'essayer un framework de haut niveau, avec Sanity pour la gestion des données et Stripe pour la gestion des paiements... et une fois que j'ai pris en main Next.js, ça m'a semblé très intuitif et d'une simplicité déconcertante.
+    details_1: Il s'agit d'une boutique de commerce en ligne, développé en utilisant Next.js, Sanity et Stripe, déployé avec Vercel.
+    details_2: Sanity étant une plateforme de mise en ligne de produits et Stripe la plateforme de traitement des paiements en ligne, c'est avec Next.js que cette boutique ecommerce a été développée. C'est quoi, Next.js ?
+    details_3: Eh bien, Next.js est un framework (c'est à dire une boîte à outils pour développement web) lui-même basé sur un autre framework, c'est à dire React, mais contrairement à celui-ci il permet également le développement backend et le rendu côté serveur.
+    details_4: Après une première phase de développement que, pour tout vous dire, j'ai effectuée en suivant un tutoriel sur Youtube (lien en bas de la page) tout en ajoutant ma propre touche en utilisant d'autres outils comme Tailwind CSS pour le design et Redux pour la gestion du panier, la première impression que j'avais eu était que Next.js permettait une expérience de développement beaucoup plus fluide et plus productive, on aurait dit un outil parfait. Mais il a fallu que je me replonge dans ce projet pour compléter et ajouter d'autres fonctionnalités pour me rendre compte que Next.js n'est pas si parfait que cela.
+    details_5: Sans trop rentrer dans les détails, Next.js est une boîte à outils formidable quand tout marche et une boîte noire quand quelque chose cloche, auquel cas on prend plus de temps à étudier la boîte pour trouver la solution que si on trouvait la solution en utilisant des outils certes un peu plus rudimentaires mais plus transparents également.
+    details_6: Par exemple, j'ai été surpris qu'il fallait trouver une solution de contournement pour utiliser la base de donnée pour les sessions à identifiants (Next.js utilisant les jetons JWT par défaut, ce qui comporte quelques risques en terme de sécurité tout de même).
+    details_7: "Liste des fonctionnalités ajoutées:"
+    list:
+      1: Possibilité de s'authentifier avec son compte Github ou avec un nom d'utilisateur et mot de passe
+      2: Possibilité de laisser un avis sur les produits
+      3: Possibilité de modifier les données de votre profil, y compris l'ajout, la mise à jour ou la suppression de votre photo de profil.
+      4: Enregistrer les commandes de produits dans une base de données et les afficher sur le site
+      5: Formulaire de contact relié à un serveur de messagerie électronique
     date: 15 août 2022 - 25 août 2022
     tags: Next.js / Sanity / Stripe
     update: 20 novembre 2022
+    link:
+      1: Construire et déployer une application React de commerce électronique moderne et complète avec Stripe
   corunner:
     title: Plate-forme d'entraînement Corunner
     name: Corunner Fullstack App

@@ -70,6 +70,7 @@ data:
   tools: Tools & Technologies
   created: Created
   updated: Updated
+  links: External links
   npm:
     title: GraphQL Secure Data
     name: GraphQL Security Module
@@ -84,11 +85,24 @@ data:
     title: Instashop
     name: Next.js Ecommerce App
     website: https://instashop-seven.vercel.app
-    details_1: This is an online ecommerce store. Easy build with Next.js & Sanity, easy deployment with Vercel.
-    details_2: Usually I love to build everything from scratch, but this time I allowed myself to try out a high level framework along with Sanity for data management and Stripe for payments... and once I got the hand of Next.js, it seemed very intuitive and surprisingly straightforward.
+    details_1: This is an e-commerce store, developed using Next.js, Sanity and Stripe, deployed with Vercel.
+    details_2: Sanity being a platform to put products online and Stripe the platform to process online payments, it is with Next.js that this ecommerce store has been developed. What is Next.js?
+    details_3: Well, Next.js is a framework (i.e. a toolkit for web development) itself based on another framework, i.e. React, but unlike this one it also allows backend development and server-side rendering.
+    details_4: After a first phase of development which, full disclorure, I did by following a tutorial on Youtube (link at the bottom of the page) while adding my own touch by using other tools like Tailwind CSS for the design and Redux for the cart management, the first impression I had was that Next.js allowed a much smoother and more productive development experience, it looked like a perfect tool. But I had to go back to this project to complete and add other features to realize that Next.js is not so perfect after all.
+    details_5: Without going into too much detail, Next.js is a great toolbox when everything works and a black box when something goes wrong, in which case it takes more time to study the box to find the solution than if you found the solution using tools that are admittedly a bit more rudimentary but also more transparent.
+    details_6: For example, I was surprised that I had to find a workaround to use database strategy for login sessions (Next.js using JWT tokens by default, which has some security risks nonetheless).
+    details_7: "List of added features:"
+    list:
+      1: Possibility to authenticate users with their Github account or with a username and password
+      2: Possibility to leave a review on the products
+      3: Possibility to modify your profile data, including add/update or remove the profile picture
+      4: Save product orders in a database and displaying them on the site
+      5: Contact form linked to an email server
     date: August 15th 2022 - August 25th, 2022
     tags: Next.js / Sanity / Stripe
     update: November 20th, 2022
+    link:
+      1: Build and Deploy a Modern Full Stack ECommerce React Application with Stripe
   corunner:
     title: Corunner Workout Platform
     name: Corunner Fullstack App

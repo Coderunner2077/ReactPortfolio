@@ -32,6 +32,7 @@ const ProjectInfo = () => {
 										{info.title === "data.website" || info.title === "data.source" ? (
 											<a
 												href={info.details}
+												target="_blank"
 												className={
 													info.title === 'data.website' ||
 														info.title === 'data.source'
@@ -105,6 +106,20 @@ const ProjectInfo = () => {
 						</div>
 					);
 				})}
+				{singleProjectData.ProjectInfo.ExternalLinks && (
+					<div className="pt-5 mt-5">
+						<h4 className="font-general-regular text-primary-dark dark:text-primary-light text-lg font-semibold">
+							{t("data.links")}
+						</h4>
+						{singleProjectData.ProjectInfo.ExternalLinks.map((item) => (
+							<p className="font-general-regular text-ternary-dark dark:text-ternary-light" key={`external-link-${item.id}`}>
+								<a href={item.link.url} target="_blank" className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300">
+									{t(item.link.title)}
+								</a>
+							</p>
+						))}
+					</div>
+				)}
 			</div>
 		</div>
 	);
