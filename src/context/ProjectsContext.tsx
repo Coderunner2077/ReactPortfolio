@@ -1,5 +1,6 @@
 import React, { useState, createContext } from 'react';
 import { projectsData } from '../data/projects';
+import { useTranslation } from "react-i18next";
 
 // Create projects context
 export const ProjectsContext = createContext<{
@@ -17,6 +18,7 @@ export const ProjectsProvider = (props) => {
 	const [projects, setProjects] = useState(projectsData);
 	const [searchProject, setSearchProject] = useState('');
 	const [selectProject, setSelectProject] = useState('');
+	const { t } = useTranslation();
 
 	// Search projects by project title
 	const searchProjectsByTitle = projects.filter((item) => {
@@ -32,8 +34,7 @@ export const ProjectsProvider = (props) => {
 
 	// Select projects by project category
 	const selectProjectsByCategory = projects.filter((item) => {
-		let category =
-			item.category.charAt(0).toUpperCase() + item.category.slice(1);
+		let category = t(item.category);
 		return category.includes(selectProject);
 	});
 

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 const selectOptions = [
 	'projects.category.web',
+	'projects.category.ecommerce',
 	'projects.category.mern',
 	'projects.category.react',
 	'projects.category.npm',
