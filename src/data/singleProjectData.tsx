@@ -119,6 +119,7 @@ export const singleProjectData = [
 		ProjectHeader: {
 			title: 'data.instashop.title',
 			publishDate: 'data.instashop.date',
+			updateDate: 'data.instashop.update',
 			tags: 'data.instashop.tags',
 		},
 		ProjectImages: [

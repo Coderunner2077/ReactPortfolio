@@ -81,7 +81,6 @@ const ProjectInfo = () => {
 					{t(singleProjectData.ProjectInfo.ProjectDetailsHeading)}
 				</p>
 				{singleProjectData.ProjectInfo.ProjectDetails.map((details, index) => {
-					console.log("details: ", details);
 					return (
 						<div key={`about-section-paragraph-${details.id}-${index}`}>
 							<p

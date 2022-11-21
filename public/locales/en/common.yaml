@@ -68,6 +68,8 @@ data:
   website: Website
   source: Source Code
   tools: Tools & Technologies
+  created: Created
+  updated: Updated
   npm:
     title: GraphQL Secure Data
     name: GraphQL Security Module
@@ -86,6 +88,7 @@ data:
     details_2: Usually I love to build everything from scratch, but this time I allowed myself to try out a high level framework along with Sanity for data management and Stripe for payments... and once I got the hand of Next.js, it seemed very intuitive and surprisingly straightforward.
     date: August 15th 2022 - August 25th, 2022
     tags: Next.js / Sanity / Stripe
+    update: November 20th, 2022
   corunner:
     title: Corunner Workout Platform
     name: Corunner Fullstack App
