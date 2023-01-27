@@ -61,7 +61,7 @@ about:
   project: About Project
   bio1: Hi, I'm Guillaume Coderunner, a React / NodeJS full-stack developer. I love working with web technologies and exploring the JavaScript ecosystem.
   bio2: I am passionate about programming, implementing new technologies in my projects in a creative way. My goal is to thrive for perfection by using the best practices to the best of my ability.
-  bio3: I like both frontend and backend sides of the development. Being a self-taught programmer, I've come a long way learning different languages, including C, JAVA, PHP, and finally React/NodeJS ecosystem in which I've been swimming these last few years. Currently, I am an auto-entrepreneur in freelance web development .
+  bio3: I like both frontend and backend sides of the development. Being a self-taught programmer, I've come a long way learning different languages, including C, JAVA, PHP, and finally React/NodeJS ecosystem in which I've been swimming these last few years.
 data:
   name: Name
   category: Category
