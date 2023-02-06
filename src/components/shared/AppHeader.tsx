@@ -15,6 +15,7 @@ const AppHeader = () => {
 	const [activeTheme, setTheme] = useThemeSwitcher();
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
+	const isHired = true;
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -25,7 +26,8 @@ const AppHeader = () => {
 	}
 
 	const showHireMeModal = e => {
-		dispatch(showModal({ body: <HireForm /> }));
+		if (!isHired)
+			dispatch(showModal({ body: <HireForm /> }));
 	}
 
 	return (
@@ -128,10 +130,10 @@ const AppHeader = () => {
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<span
 							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-2 py-2 mt-2 duration-300 w-24"
+							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-2 py-2 mt-2 duration-300 w-24 cursor-not-allowed opacity-50"
 							aria-label={`${t("navbar.hire")} Button`}
 						>
-							<Button title={t("navbar.hire")} />
+							<Button title={t("navbar.hire")} disabled={true} />
 						</span>
 					</div>
 				</div>
@@ -165,10 +167,10 @@ const AppHeader = () => {
 				<div className="hidden sm:flex justify-between items-center sm:space-x-1 md:space-x-2 lg:space-x-4">
 					<span
 						onClick={showHireMeModal}
-						className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-0.5 md:px-2 lg:px-4 py-2.5 duration-300"
+						className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-0.5 md:px-2 lg:px-4 py-2.5 duration-300 cursor-not-allowed opacity-50"
 						aria-label="Hire Me Button"
 					>
-						<Button title={t("navbar.hire")} />
+						<Button title={t("navbar.hire")} disabled={true} />
 					</span>
 					{/* Theme switcher large screen */}
 					<div
